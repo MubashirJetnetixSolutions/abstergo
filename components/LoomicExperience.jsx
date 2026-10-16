@@ -3,6 +3,8 @@
 import ChapterNavigation from "./loomic/sections/ChapterNavigation";
 import LoomicHeader from "./loomic/sections/LoomicHeader";
 import KineticBand from "./loomic/sections/KineticBand";
+import VoltisPowerUltraSection from "./loomic/sections/VoltisPowerUltraSection";
+import VoltisPowerProSection from "./loomic/sections/VoltisPowerProSection";
 import PrecisionProSection from "./loomic/sections/PrecisionProSection";
 import ReclinerSection from "./loomic/sections/ReclinerSection";
 import DeskEditorial from "./loomic/sections/DeskEditorial";
@@ -14,29 +16,28 @@ import DisplayChargerSection from "./loomic/sections/DisplayChargerSection";
 import Charger65Section from "./loomic/sections/Charger65Section";
 import Charger45Section from "./loomic/sections/Charger45Section";
 import PowerInterlude from "./loomic/sections/PowerInterlude";
-import VoltisSection from "./loomic/sections/VoltisSection";
-import MobilePowerSection from "./loomic/sections/MobilePowerSection";
 import CableSection from "./loomic/sections/CableSection";
 import EssentialChapters from "./loomic/sections/EssentialChapters";
 import CollectionSection from "./loomic/sections/CollectionSection";
 import LoomicFooter from "./loomic/sections/LoomicFooter";
-import useLoomicExperienceEffects from "./loomic/hooks/useLoomicExperienceEffects";
+import useLoomicScroll from "./loomic/hooks/useLoomicScroll";
 import { useRef, useState } from "react";
 import "./loomic-experience.css";
 import LoomicMotion from "./LoomicMotion";
 import LoomicHero from "./LoomicHero";
 import SitePreloader from "./SitePreloader";
 import "./loomic-refinement.css";
+import "./loomic-brand.css";
 export default function LoomicExperience() {
   const root = useRef(null),
     [menu, setMenu] = useState(false);
-  useLoomicExperienceEffects({
-    root,
-  });
+  useLoomicScroll(root);
   return (
     <main className="lm-page" ref={root}>
       <SitePreloader
         assets={[
+          "/loomic/slim-powerbank.webp",
+          "/loomic/voltis-power-pro-1.webp",
           "/logo-white.png",
           "/loomic/logo.svg",
           "/loomic/charger-140-2.webp",
@@ -53,6 +54,8 @@ export default function LoomicExperience() {
       <LoomicHeader menu={menu} setMenu={setMenu} />
       <LoomicHero />
       <KineticBand />
+      <VoltisPowerUltraSection />
+      <VoltisPowerProSection />
       <PrecisionProSection />
       <ReclinerSection />
       <DeskEditorial />
@@ -64,8 +67,7 @@ export default function LoomicExperience() {
       <Charger65Section />
       <Charger45Section />
       <PowerInterlude />
-      <VoltisSection />
-      <MobilePowerSection />
+
       <CableSection />
       <EssentialChapters />
       <CollectionSection />

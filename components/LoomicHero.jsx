@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
@@ -7,6 +6,26 @@ import LoomicLogo from "./LoomicLogo";
 import LoomicPortal from "./LoomicPortal";
 import "./loomic-hero.css";
 const products = [
+  [
+    "VOLTIS POWER ULTRA",
+    "Our best seller. Your daily power.",
+    "slim-powerbank.webp",
+    "mobile-power",
+    -3,
+    -29,
+    -14,
+    15,
+  ],
+  [
+    "VOLTIS POWER PRO",
+    "Ready for anywhere.",
+    "voltis-power-pro-1.webp",
+    "voltis",
+    24,
+    -24,
+    -7,
+    20,
+  ],
   [
     "140W DISPLAY",
     "Power, in focus.",
@@ -16,26 +35,6 @@ const products = [
     4,
     5,
     28,
-  ],
-  [
-    "VOLTIS PRO",
-    "Ready for anywhere.",
-    "voltis-pro-5.webp",
-    "voltis",
-    24,
-    -24,
-    -7,
-    20,
-  ],
-  [
-    "MOBILE POWER",
-    "Go a little lighter.",
-    "slim-powerbank.webp",
-    "mobile-power",
-    -3,
-    -29,
-    -14,
-    15,
   ],
   [
     "COMFORT",
@@ -236,6 +235,7 @@ export default function LoomicHero() {
         visual.style.transform = `scale(${w / 30})`;
         info.style.opacity = mobile ? appear : collection ? settle : 0;
         info.style.transform = `translate3d(0,${imageWidth / 2 + 10}px,0)`;
+
         if (paths[i] && Math.abs(progress - pathProgress) > 0.0002) {
           const sx = 50 + x,
             sy = 49 + y;
@@ -286,18 +286,12 @@ export default function LoomicHero() {
         measure();
         start();
       },
-      {
-        rootMargin: "50px",
-      },
+      { rootMargin: "50px" },
     );
     io.observe(section);
-    stage.addEventListener("pointermove", move, {
-      passive: true,
-    });
+    stage.addEventListener("pointermove", move, { passive: true });
     stage.addEventListener("pointerleave", leave);
-    addEventListener("scroll", measure, {
-      passive: true,
-    });
+    addEventListener("scroll", measure, { passive: true });
     addEventListener("resize", measure);
     document.addEventListener("visibilitychange", start);
     start();
@@ -394,8 +388,8 @@ export default function LoomicHero() {
         >
           <defs>
             <linearGradient id="lh-signal">
-              <stop stopColor="#e95118" stopOpacity=".1" />
-              <stop offset="1" stopColor="#e95118" stopOpacity=".55" />
+              <stop stopColor="#6B6B6F" stopOpacity=".1" />
+              <stop offset="1" stopColor="#6B6B6F" stopOpacity=".55" />
             </linearGradient>
           </defs>
           {products.map((_, i) => (

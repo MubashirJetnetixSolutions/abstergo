@@ -1,5 +1,4 @@
 "use client";
-
 // Resolution-independent portal lighting stays sharp at every scroll scale.
 export default function LoomicPortal() {
   return (
@@ -7,11 +6,11 @@ export default function LoomicPortal() {
       <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
         <defs>
           <linearGradient id="lh-warm-metal" x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="#fff5eb" stopOpacity=".08" />
-            <stop offset=".28" stopColor="#fff5eb" stopOpacity=".5" />
-            <stop offset=".5" stopColor="#e95118" stopOpacity=".65" />
-            <stop offset=".72" stopColor="#fff5eb" stopOpacity=".06" />
-            <stop offset="1" stopColor="#e95118" stopOpacity=".25" />
+            <stop stopColor="#FFFFFF" stopOpacity=".08" />
+            <stop offset=".28" stopColor="#FFFFFF" stopOpacity=".5" />
+            <stop offset=".5" stopColor="#6B6B6F" stopOpacity=".65" />
+            <stop offset=".72" stopColor="#FFFFFF" stopOpacity=".06" />
+            <stop offset="1" stopColor="#6B6B6F" stopOpacity=".25" />
           </linearGradient>
         </defs>
         <g fill="none" stroke="url(#lh-warm-metal)">

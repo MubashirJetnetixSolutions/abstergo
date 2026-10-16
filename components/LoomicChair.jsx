@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 const views = [
   ["front", 1084, 1451, 68, 52, 1040, 1451],
@@ -78,14 +77,10 @@ export default function LoomicChair() {
         active = es[0].isIntersecting;
         update();
       },
-      {
-        rootMargin: "100px",
-      },
+      { rootMargin: "100px" },
     );
     io.observe(section);
-    addEventListener("scroll", update, {
-      passive: true,
-    });
+    addEventListener("scroll", update, { passive: true });
     addEventListener("resize", update);
     document.addEventListener("visibilitychange", start);
     return () => {
@@ -111,9 +106,7 @@ export default function LoomicChair() {
           <svg
             className="lm-chair-angle"
             key={name}
-            style={{
-              opacity: i === 0 ? 1 : 0,
-            }}
+            style={{ opacity: i === 0 ? 1 : 0 }}
             viewBox={`${x} ${y1 - 10} ${width} ${height}`}
             preserveAspectRatio="xMidYMax meet"
             aria-hidden="true"

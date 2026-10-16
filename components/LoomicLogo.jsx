@@ -8,25 +8,17 @@ export default function LoomicLogo() {
       preserveAspectRatio="xMidYMid meet"
     >
       <defs>
-        <linearGradient id="lm-logo-sheen" x1="-100%" y1="0" x2="0%" y2="0">
-          <stop offset="0" stopColor="#f4f0ea" />
-          <stop offset=".35" stopColor="#f4f0ea" />
-          <stop offset=".5" stopColor="#e95118" />
-          <stop offset=".6" stopColor="#ffb778" />
-          <stop offset=".75" stopColor="#f4f0ea" />
-          <stop offset="1" stopColor="#f4f0ea" />
-          <animate
-            attributeName="x1"
-            values="-100%;100%"
-            dur="5s"
-            repeatCount="indefinite"
-          />
-          <animate
-            attributeName="x2"
-            values="0%;200%"
-            dur="5s"
-            repeatCount="indefinite"
-          />
+        <linearGradient id="lm-logo-sheen" x1="0%" y1="0" x2="100%" y2="0">
+          <stop offset="0" stopColor="#A9AAAE" />
+          <stop offset=".5" stopColor="#6B6B6F">
+            <animate
+              attributeName="offset"
+              values=".35;.65;.35"
+              dur="6s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="1" stopColor="#2E2E30" />
         </linearGradient>
       </defs>
       <g fill="url(#lm-logo-sheen)">

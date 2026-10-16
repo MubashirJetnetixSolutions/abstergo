@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function SitePreloader({
@@ -114,11 +113,7 @@ export default function SitePreloader({
           aria-valuemax={100}
           aria-valuenow={progress}
         >
-          <div
-            style={{
-              transform: `scaleX(${progress / 100})`,
-            }}
-          />
+          <div style={{ transform: `scaleX(${progress / 100})` }} />
         </div>
         <div className="preloader-caption">
           <span>

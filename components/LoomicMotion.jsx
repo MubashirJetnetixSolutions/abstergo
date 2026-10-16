@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -90,11 +89,7 @@ export default function LoomicMotion() {
           if (!letters.length) return;
           gsap.fromTo(
             letters,
-            {
-              yPercent: -115,
-              rotationX: 30,
-              opacity: 0,
-            },
+            { yPercent: -115, rotationX: 30, opacity: 0 },
             {
               yPercent: 0,
               rotationX: 0,
@@ -115,10 +110,7 @@ export default function LoomicMotion() {
         const img = precision.querySelector(":scope>img");
         gsap.fromTo(
           img,
-          {
-            y: 55,
-            opacity: 0,
-          },
+          { y: 55, opacity: 0 },
           {
             y: 0,
             opacity: 1,
@@ -133,17 +125,12 @@ export default function LoomicMotion() {
         );
         gsap.fromTo(
           precision.querySelector(".lm-precision-rule i"),
-          {
-            scaleX: 0,
-          },
+          { scaleX: 0 },
           {
             scaleX: 1,
             duration: 1.4,
             ease: "power3.inOut",
-            scrollTrigger: {
-              trigger: precision,
-              start: "top 80%",
-            },
+            scrollTrigger: { trigger: precision, start: "top 80%" },
           },
         );
       }
@@ -151,9 +138,7 @@ export default function LoomicMotion() {
       if (band)
         gsap.fromTo(
           band.firstElementChild,
-          {
-            xPercent: 0,
-          },
+          { xPercent: 0 },
           {
             xPercent: -25,
             ease: "none",
@@ -167,18 +152,14 @@ export default function LoomicMotion() {
         );
       root
         .querySelectorAll(
-          ".lm-precision-details figure,.lm-precision-life figure,.lm-audio-detail-grid figure,.lm-speaker-details figure,.lm-charger-angles figure,.lm-voltis-details figure",
+          ".lm-precision-details figure,.lm-precision-life figure,.lm-audio-detail-grid figure,.lm-speaker-details figure,.lm-charger-angles figure,.lm-voltis-details figure,.lm-ultra-gallery figure,.lm-ultra-use figure",
         )
         .forEach((card, i) => {
           const img = card.querySelector("img");
           if (!img) return;
           gsap.fromTo(
             img,
-            {
-              y: 35,
-              rotationZ: 0,
-              scale: 0.97,
-            },
+            { y: 35, rotationZ: 0, scale: 0.97 },
             {
               y: 0,
               rotationZ: 0,
@@ -197,11 +178,7 @@ export default function LoomicMotion() {
       if (footer)
         gsap.fromTo(
           footer.querySelector(".lm-footer-logo"),
-          {
-            yPercent: 30,
-            scale: 0.9,
-            opacity: 0.2,
-          },
+          { yPercent: 30, scale: 0.9, opacity: 0.2 },
           {
             yPercent: 0,
             scale: 1,
@@ -229,9 +206,7 @@ export default function LoomicMotion() {
               );
           });
         },
-        {
-          rootMargin: "-25% 0px -25% 0px",
-        },
+        { rootMargin: "-25% 0px -25% 0px" },
       );
       chapterLinks.forEach((a) => {
         const target = root.querySelector(a.hash);
@@ -246,10 +221,7 @@ export default function LoomicMotion() {
       if (desk) {
         gsap.fromTo(
           desk.querySelector("img"),
-          {
-            scale: 1.12,
-            yPercent: -5,
-          },
+          { scale: 1.12, yPercent: -5 },
           {
             scale: 1.02,
             yPercent: 5,
@@ -264,10 +236,7 @@ export default function LoomicMotion() {
         );
         gsap.fromTo(
           desk.querySelectorAll(".lm-motion-line"),
-          {
-            yPercent: 110,
-            opacity: 0,
-          },
+          { yPercent: 110, opacity: 0 },
           {
             yPercent: 0,
             opacity: 1,
@@ -310,10 +279,7 @@ export default function LoomicMotion() {
         );
         gsap.fromTo(
           travel.querySelector("img"),
-          {
-            scale: 1.1,
-            yPercent: -3,
-          },
+          { scale: 1.1, yPercent: -3 },
           {
             scale: 1.01,
             yPercent: 3,
@@ -363,10 +329,7 @@ export default function LoomicMotion() {
           );
           gsap.fromTo(
             section.querySelectorAll(".lm-scene-atmosphere,.lm-real-ghost"),
-            {
-              xPercent: -6,
-              yPercent: 6,
-            },
+            { xPercent: -6, yPercent: 6 },
             {
               xPercent: 6,
               yPercent: -6,
@@ -384,9 +347,7 @@ export default function LoomicMotion() {
       if (color) {
         gsap.fromTo(
           color,
-          {
-            backgroundPosition: "100% 0",
-          },
+          { backgroundPosition: "100% 0" },
           {
             backgroundPosition: "0% 0",
             ease: "none",
@@ -404,10 +365,7 @@ export default function LoomicMotion() {
         const hand = display.querySelector(".lm-hand-image");
         gsap.fromTo(
           hand,
-          {
-            y: 30,
-            opacity: 0.4,
-          },
+          { y: 30, opacity: 0.4 },
           {
             y: 0,
             opacity: 1,
@@ -424,13 +382,7 @@ export default function LoomicMotion() {
       root.querySelectorAll(".lm-cable-pair article").forEach((card) => {
         gsap.fromTo(
           card.querySelector("img"),
-          {
-            y: 100,
-            opacity: 0,
-            x: 0,
-            rotationZ: 0,
-            scale: 1,
-          },
+          { y: 100, opacity: 0, x: 0, rotationZ: 0, scale: 1 },
           {
             y: 0,
             opacity: 1,
@@ -448,10 +400,7 @@ export default function LoomicMotion() {
       if (kit) {
         gsap.fromTo(
           kit.querySelector("img"),
-          {
-            y: 65,
-            opacity: 0.2,
-          },
+          { y: 65, opacity: 0.2 },
           {
             y: 0,
             opacity: 1,
@@ -477,12 +426,7 @@ export default function LoomicMotion() {
         });
         tl.fromTo(
           ".lm-power-cinema-main",
-          {
-            scale: 1.9,
-            xPercent: 22,
-            yPercent: 15,
-            rotation: -12,
-          },
+          { scale: 1.9, xPercent: 22, yPercent: 15, rotation: -12 },
           {
             scale: 1,
             xPercent: 0,
@@ -494,30 +438,17 @@ export default function LoomicMotion() {
         )
           .to(
             ".lm-power-cinema-caption",
-            {
-              y: -50,
-              opacity: 0,
-              duration: 0.5,
-            },
+            { y: -50, opacity: 0, duration: 0.5 },
             0.8,
           )
           .to(
             ".lm-power-cinema-main",
-            {
-              xPercent: -40,
-              scale: 1.2,
-              opacity: 0,
-              duration: 0.8,
-            },
+            { xPercent: -40, scale: 1.2, opacity: 0, duration: 0.8 },
             1.4,
           )
           .fromTo(
             ".lm-power-cinema-detail",
-            {
-              opacity: 0,
-              xPercent: 40,
-              scale: 1.5,
-            },
+            { opacity: 0, xPercent: 40, scale: 1.5 },
             {
               opacity: 1,
               xPercent: 0,
@@ -529,15 +460,8 @@ export default function LoomicMotion() {
           )
           .fromTo(
             ".lm-power-cinema-note",
-            {
-              y: 30,
-              opacity: 0,
-            },
-            {
-              y: 0,
-              opacity: 1,
-              duration: 0.5,
-            },
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5 },
             2,
           );
       }
@@ -565,10 +489,7 @@ export default function LoomicMotion() {
         );
         gsap.fromTo(
           card.querySelector("img"),
-          {
-            scale: 1.18,
-            yPercent: i % 2 ? -6 : 6,
-          },
+          { scale: 1.18, yPercent: i % 2 ? -6 : 6 },
           {
             scale: 1.03,
             yPercent: i % 2 ? 6 : -6,
@@ -586,12 +507,7 @@ export default function LoomicMotion() {
       if (cable) {
         gsap.fromTo(
           cable,
-          {
-            rotationZ: -3,
-            x: 0,
-            y: 12,
-            scale: 0.96,
-          },
+          { rotationZ: -3, x: 0, y: 12, scale: 0.96 },
           {
             rotationZ: 3,
             x: 0,
@@ -611,11 +527,7 @@ export default function LoomicMotion() {
       if (edit) {
         gsap.fromTo(
           edit.querySelector("h2"),
-          {
-            y: 70,
-            opacity: 0.15,
-            clipPath: "inset(0 0 80% 0)",
-          },
+          { y: 70, opacity: 0.15, clipPath: "inset(0 0 80% 0)" },
           {
             y: 0,
             opacity: 1,
@@ -629,26 +541,25 @@ export default function LoomicMotion() {
             },
           },
         );
-        edit.querySelectorAll(".lm-tile").forEach((tile, i) =>
-          gsap.fromTo(
-            tile.querySelector("img"),
-            {
-              y: 35,
-              rotation: i % 2 ? 3 : -3,
-            },
-            {
-              y: -25,
-              rotation: 0,
-              ease: "none",
-              scrollTrigger: {
-                trigger: tile,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1.2,
+        edit
+          .querySelectorAll(".lm-tile")
+          .forEach((tile, i) =>
+            gsap.fromTo(
+              tile.querySelector("img"),
+              { y: 35, rotation: i % 2 ? 3 : -3 },
+              {
+                y: -25,
+                rotation: 0,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: tile,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 1.2,
+                },
               },
-            },
-          ),
-        );
+            ),
+          );
       }
     }, root);
     const refresh = () => ScrollTrigger.refresh();

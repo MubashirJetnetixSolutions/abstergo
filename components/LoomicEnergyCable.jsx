@@ -1,6 +1,6 @@
 "use client";
-
 import { useEffect, useRef } from "react";
+
 const limit = (x) => Math.max(0, Math.min(1, x));
 export default function LoomicEnergyCable() {
   const ref = useRef(null);
@@ -76,9 +76,7 @@ export default function LoomicEnergyCable() {
     const update = () => {
       if (!frame) frame = requestAnimationFrame(draw);
     };
-    addEventListener("scroll", update, {
-      passive: true,
-    });
+    addEventListener("scroll", update, { passive: true });
     addEventListener("resize", update);
     draw();
     return () => {
@@ -96,18 +94,18 @@ export default function LoomicEnergyCable() {
       >
         <defs>
           <linearGradient id="lm-wire-metal" x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="#d8d4d0" />
-            <stop offset=".45" stopColor="#5f6065" />
-            <stop offset="1" stopColor="#1a1a20" />
+            <stop stopColor="#E4E4E6" />
+            <stop offset=".45" stopColor="#6B6B6F" />
+            <stop offset="1" stopColor="#0A0A0A" />
           </linearGradient>
           <linearGradient id="lm-wire-charge" x1="0" y1="0" x2="0" y2="1">
-            <stop stopColor="#49464f" />
-            <stop offset="1" stopColor="#141219" />
+            <stop stopColor="#6B6B6F" />
+            <stop offset="1" stopColor="#0A0A0A" />
           </linearGradient>
           <linearGradient id="lm-wire-heat" x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="#ffdb9c" />
-            <stop offset=".45" stopColor="#ff681e" />
-            <stop offset="1" stopColor="#d540b7" />
+            <stop stopColor="#E4E4E6" />
+            <stop offset=".45" stopColor="#6B6B6F" />
+            <stop offset="1" stopColor="#6B6B6F" />
           </linearGradient>
           <mask id="lm-wire-depth">
             <rect width="1000" height="800" fill="white" />
@@ -129,14 +127,14 @@ export default function LoomicEnergyCable() {
           <path className="lm-wire-path lm-wire-current" pathLength="1000" />
         </g>
         <g className="lm-wire-charger">
-          <rect x="24" y="-20" width="9" height="27" rx="2" fill="#b4b0ae" />
-          <rect x="59" y="-20" width="9" height="27" rx="2" fill="#b4b0ae" />
+          <rect x="24" y="-20" width="9" height="27" rx="2" fill="#A9AAAE" />
+          <rect x="59" y="-20" width="9" height="27" rx="2" fill="#A9AAAE" />
           <rect
             width="94"
             height="100"
             rx="22"
             fill="url(#lm-wire-charge)"
-            stroke="#aaa3"
+            stroke="#A9AAAE33"
           />
           <rect
             x="9"
@@ -145,29 +143,29 @@ export default function LoomicEnergyCable() {
             height="82"
             rx="17"
             fill="none"
-            stroke="#ffffff0e"
+            stroke="#FFFFFF0e"
           />
           <text
             x="47"
             y="44"
             textAnchor="middle"
-            fill="#ddd4c9"
+            fill="#E4E4E6"
             fontSize="9"
             letterSpacing="1.3"
           >
             LOOMIC
           </text>
-          <circle cx="47" cy="62" r="2.5" fill="#fa783d" />
+          <circle cx="47" cy="62" r="2.5" fill="#A9AAAE" />
           <rect
             x="29"
             y="95"
             width="36"
             height="9"
             rx="4"
-            fill="#09090d"
-            stroke="#90818a"
+            fill="#0A0A0A"
+            stroke="#6B6B6F"
           />
-          <rect x="35" y="98" width="24" height="3" rx="1" fill="#ff8b45" />
+          <rect x="35" y="98" width="24" height="3" rx="1" fill="#A9AAAE" />
         </g>
         <g className="lm-wire-plug">
           <rect
@@ -178,7 +176,7 @@ export default function LoomicEnergyCable() {
             rx="6"
             fill="url(#lm-wire-metal)"
           />
-          <rect x="-17" y="-3" width="34" height="37" rx="10" fill="#d7d2cb" />
+          <rect x="-17" y="-3" width="34" height="37" rx="10" fill="#E4E4E6" />
           <rect
             x="-12"
             y="3"
@@ -186,9 +184,9 @@ export default function LoomicEnergyCable() {
             height="24"
             rx="6"
             fill="none"
-            stroke="#7775"
+            stroke="#6B6B6F55"
           />
-          <rect x="-8" y="31" width="16" height="16" rx="5" fill="#bab4ae" />
+          <rect x="-8" y="31" width="16" height="16" rx="5" fill="#A9AAAE" />
         </g>
       </svg>
       <div className="lm-wire-status">

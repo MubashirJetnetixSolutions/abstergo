@@ -1,0 +1,37 @@
+/* Persistent headers, retaining each page's existing size and visual style. */
+header.nav,
+.lm-page > header.lm-nav {
+  position: fixed !important;
+  z-index: 90;
+  transform: none !important;
+  translate: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.lm-page > header.lm-nav {
+  top: 20px;
+  background: #0a0a0aed;
+  border-color: #ffffff29;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.store-shell > header.store-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+}
+.store-shell::before {
+  content: "";
+  display: block;
+  height: var(--store-header-height, 86px);
+}
+@media (max-width: 700px) {
+  .lm-page > header.lm-nav {
+    top: 12px;
+  }
+  .store-shell::before {
+    height: var(--store-header-height, 70px);
+  }
+}

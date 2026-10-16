@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 // A small native WebGL light field: no scene graph or external 3D runtime.
 export default function LoomicField() {

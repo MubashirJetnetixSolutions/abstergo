@@ -1,0 +1,40 @@
+.lm-sound-control {
+  position: fixed;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 1px solid #ffffff29;
+  border-radius: 999px;
+  background: #0a0a0aed;
+  color: #ffffff;
+  box-shadow: 0 5px 24px #0a0a0a22;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+.lm-sound-control svg {
+  color: #6b6b6f;
+}
+.lm-sound-control:hover {
+  background: #2e2e30;
+  border-color: #6b6b6f;
+}
+.lm-sound-control:focus-visible {
+  outline: 2px solid #6b6b6f;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .lm-sound-control {
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    padding: 10px 13px;
+  }
+}

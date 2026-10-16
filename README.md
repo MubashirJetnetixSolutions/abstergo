@@ -1,61 +1,96 @@
-# Abstergo Technology — clean source export
+# Abstergo Technology — complete Next.js source
 
-Complete website source, including the Loomic page, original assets, preloader and scroll animations. This export reorganizes the accepted frontend without redesigning it.
+This is the full current website, including all latest Loomic changes. Use this complete project in a fresh folder. It replaces the earlier Vinext/Cloudflare export and the small patch ZIPs.
+
+## Requirements
+
+- Node.js 22.x (verified with Node.js 22.23.3)
+- npm
+
+All application code is JavaScript/JSX. There are no TypeScript files or required Cloudflare, Vinext, Wrangler, Bash or pnpm scripts.
 
 ## Run locally
 
-Use Node.js 22.13 or newer and pnpm 11.25.0 (the version pinned in `package.json`).
+Open a terminal in the folder containing this README and `package.json`:
 
 ```bash
-pnpm install --frozen-lockfile
-pnpm dev
+npm ci --include=dev
+npm run dev
 ```
 
-Open the URL printed in the terminal; visit `/loomic` for the Loomic page.
+Open http://localhost:3000 and http://localhost:3000/loomic.
+
+For a production build:
 
 ```bash
-pnpm build
-pnpm start
+npm run build
+npm start
 ```
 
-The existing application uses React with Next.js App Router conventions, Vinext/Vite, Tailwind CSS v4, GSAP and Lenis. The custom website components are JavaScript/JSX. Existing starter infrastructure and shared UI utilities include TypeScript; their toolchain is retained.
+Stop the dev server before starting the production server on the same port. When changing source, rebuild before using `npm start`.
 
-## Component map
+## Deploy on Vercel
+
+Push the contents of this folder to your GitHub repository and import it into Vercel.
+
+| Setting | Value |
+| --- | --- |
+| Framework Preset | Next.js |
+| Root Directory | The folder containing `package.json` |
+| Node.js Version | 22.x |
+| Install Command | `npm ci --include=dev` |
+| Build Command | `npm run build` |
+| Output Directory | Default Next.js output (`.next`); leave the override off |
+
+`vercel.json` supplies the framework, install and build settings. `package-lock.json` pins the dependency tree. If reusing an existing Vercel project, clear old Vinext/Vite/Cloudflare command overrides and any `dist` or `dist/client` Output Directory override. If this folder sits inside another repository folder, select this folder as the Vercel Root Directory.
+
+No environment variables are needed for the current frontend. Do not upload `node_modules`, `.next` or local `.env` files; Vercel installs and builds the source.
+
+Official setup references:
+- https://vercel.com/docs/frameworks/full-stack/nextjs
+- https://vercel.com/docs/builds/configure-a-build
+- https://nextjs.org/docs/app/getting-started/deploying
+
+## Included updates
+
+- Full multi-page Abstergo website, catalog, product routes, cart and request pages.
+- Loomic Jet Black / Graphite / Steel Gray / Silver / Cool Light Gray / Pearl White palette.
+- Voltis Power Ultra first, with best-seller presentation and additional imagery.
+- Voltis Power Pro second, with transparent product views and no gallery card backgrounds.
+- Scroll animations, logo intro, shared preloader and jet-black statement strip.
+- Persistent headers across all pages.
+- New Loomic opening sound, mute preference and user-gesture fallback for blocked autoplay.
+- Your supplied favicon everywhere except Loomic, which uses an invisible icon.
+- Original local images and video assets.
+
+The original catalog behavior is retained: forms prepare downloadable requests; this export does not add an order-processing, email or payments backend. Some laptop imagery retains the original external manufacturer URLs and needs internet access.
+
+## Source map
 
 | Location | Responsibility |
 | --- | --- |
-| `app/page.jsx` | Home page composition and shared state |
-| `components/home/sections/` | Home navigation, hero, collections, editorial sections, footer and panels |
-| `components/home/hooks/` | Existing home effects, retained in their original order |
-| `components/home/Typography.jsx` | Shared home text animation components |
-| `components/home/data.js` | Home product stories and image references |
-| `components/LoomicExperience.jsx` | Loomic page composition |
-| `components/loomic/sections/` | Individual Loomic product and editorial sections |
-| `components/loomic/hooks/` | Loomic scroll and reveal effects |
-| `components/loomic/data.js` | Loomic chapter navigation and shared constants |
-| `components/LoomicHero.jsx` | Hero choreography |
-| `components/LoomicMotion.jsx` | Existing GSAP page motion |
-| `components/LoomicChair.jsx` | Existing chair animation |
-| `components/SitePreloader.jsx` | Shared preloader |
-| `components/Commerce.jsx` | Store state and actions |
-| `components/commerce/` | Store header, footer, content, views and persistence effects |
-| `public/` | Original logos, images and videos |
+| `app/` | Routes, layout, metadata and global styles |
+| `components/home/sections/` | Individual home page sections |
+| `components/home/hooks/` | Home animation effects |
+| `components/loomic/sections/` | Individual Loomic product/editorial sections |
+| `components/loomic/hooks/` | Shared Loomic scroll behavior |
+| `components/commerce/` | Store views, shared components and cart persistence |
+| `components/LoomicHero.jsx` | Hero product sequence |
+| `components/LoomicMotion.jsx` | GSAP motion choreography |
+| `components/LoomicSound.jsx` | Opening sound and control |
+| `components/SiteEnhancements.jsx` | Header measurement and route-aware favicon/sound |
+| `lib/products.js` | Laptop catalog data |
+| `public/` | Images, logos, video and favicon |
 
-## Styling
+Existing semantic class names and CSS order are intentional animation hooks. Tailwind v4 is loaded through PostCSS; gradients, masks and keyframes remain in readable CSS files.
 
-Tailwind v4 is imported in `app/globals.css`. Simple layout declarations are organized into grouped `@apply` utilities in the existing semantic CSS selectors. Complex responsive styles, keyframes, masks, gradients and scroll-controlled CSS variables remain explicit CSS.
+## Validation
 
-Existing class names are deliberately preserved because animation scripts query them. Keep the stylesheet import order and selector order when editing; later rules contain responsive and animation refinements. The refactor adds no extra DOM wrappers.
+- Fresh npm dependency install and `npm ci` completed.
+- Standard `next build` passed on Node.js 22.23.3.
+- Home, Loomic, about, cart, checkout, contact, repair, shop and all four product pages prerendered successfully.
+- Nine server-rendered page states matched the current live source exactly after component extraction.
+- Loomic best-seller content and route-specific favicon metadata verified in the Next.js prerender output.
+- Build artifacts, dependencies, old hosting tooling and TypeScript are excluded from the ZIP.
 
-## Verification
-
-- Identical server-rendered HTML before and after for Home, Loomic, shop, product, cart, contact, repair, checkout and about.
-- Equivalent expanded custom CSS selector declarations across the four main stylesheets, including animation keyframes, after normalizing formatting and independent property order.
-- All 95 public assets are byte-for-byte unchanged.
-- Production build passed.
-
-These are structural/build checks; a new browser-based visual regression run was not performed for this export. Existing animation logic, event handlers, state, dependencies and DOM hooks are retained.
-
-The live site was not modified. Dependencies, build output, Git history, environment files and the hosted project's identity are excluded. The included `.openai/hosting.json` contains only empty optional binding declarations needed by the existing build configuration.
-
-Some laptop product images use the original external image URLs and require network access. Loomic product assets are included locally. Store request forms retain their existing behavior: they prepare downloadable requests rather than sending orders or messages.
+This package was checked locally; it has not been deployed into your Vercel account. Browser-based visual/audio QA was unavailable here.
