@@ -1,0 +1,140 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+const views = [
+  ["front", 1084, 1451, 68, 52, 1040, 1451],
+  ["quarter", 1090, 1443, 55, 40, 1066, 1379],
+  ["side", 1082, 1454, 17, 45, 1054, 1454],
+  ["back-quarter", 1102, 1427, 31, 18, 1086, 1375],
+  ["back", 1070, 1470, 50, 21, 979, 1470],
+];
+export default function LoomicChair() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current,
+      section = el.closest("#comfort"),
+      layers = [...el.querySelectorAll(".lm-chair-angle")],
+      dial = el.querySelector(".lm-chair-angle-meter i"),
+      label = el.querySelector(".lm-chair-view-label");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let frame,
+      active = false,
+      progress = 0,
+      target = 0,
+      last = 0;
+    const measure = () => {
+      target = Math.max(
+        0,
+        Math.min(
+          1,
+          -section.getBoundingClientRect().top /
+            Math.max(1, section.offsetHeight - innerHeight),
+        ),
+      );
+    };
+    measure();
+    progress = target;
+    const tick = (now) => {
+      if (!active || document.hidden) {
+        frame = null;
+        last = 0;
+        return;
+      }
+      const dt = last ? Math.min(50, now - last) : 16.67;
+      last = now;
+      progress = reduced
+        ? 0
+        : progress + (target - progress) * (1 - Math.exp(-dt / 200));
+      const q = progress * 4,
+        a = Math.floor(q),
+        b = Math.min(4, a + 1),
+        t = q - a;
+      layers.forEach((layer, i) => {
+        layer.style.opacity = i === a ? 1 - t : i === b ? t : 0;
+        layer.style.visibility = i === a || i === b ? "visible" : "hidden";
+      });
+      dial.style.transform = `scaleX(${progress})`;
+      label.textContent = [
+        "FRONT VIEW",
+        "THREE-QUARTER VIEW",
+        "SIDE VIEW",
+        "REAR THREE-QUARTER",
+        "REAR VIEW",
+      ][Math.round(q)];
+      if (!reduced && Math.abs(target - progress) > 0.00005)
+        frame = requestAnimationFrame(tick);
+      else frame = null;
+    };
+    const start = () => {
+      if (active && !document.hidden && !frame)
+        frame = requestAnimationFrame(tick);
+    };
+    const update = () => {
+      measure();
+      start();
+    };
+    const io = new IntersectionObserver(
+      (es) => {
+        active = es[0].isIntersecting;
+        update();
+      },
+      {
+        rootMargin: "100px",
+      },
+    );
+    io.observe(section);
+    addEventListener("scroll", update, {
+      passive: true,
+    });
+    addEventListener("resize", update);
+    document.addEventListener("visibilitychange", start);
+    return () => {
+      cancelAnimationFrame(frame);
+      io.disconnect();
+      removeEventListener("scroll", update);
+      removeEventListener("resize", update);
+      document.removeEventListener("visibilitychange", start);
+    };
+  }, []);
+  return (
+    <div
+      ref={ref}
+      className="lm-chair-turntable"
+      role="img"
+      aria-label="Loomic chair, scroll-controlled front-to-back product views"
+    >
+      {views.map(([name, w, h, x1, y1, x2, y2], i) => {
+        const height = y2 - y1 + 25,
+          width = height * 0.82,
+          x = (x1 + x2) / 2 - width / 2;
+        return (
+          <svg
+            className="lm-chair-angle"
+            key={name}
+            style={{
+              opacity: i === 0 ? 1 : 0,
+            }}
+            viewBox={`${x} ${y1 - 10} ${width} ${height}`}
+            preserveAspectRatio="xMidYMax meet"
+            aria-hidden="true"
+          >
+            <image
+              href={"/loomic/chair-" + name + "-cutout.webp"}
+              width={w}
+              height={h}
+            />
+          </svg>
+        );
+      })}
+      <div className="lm-chair-turntable-caption">
+        <span className="lm-chair-view-label">FRONT VIEW</span>
+        <span>
+          SCROLL TO TURN <b>↻</b>
+        </span>
+        <div className="lm-chair-angle-meter">
+          <i />
+        </div>
+      </div>
+    </div>
+  );
+}

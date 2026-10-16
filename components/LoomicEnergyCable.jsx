@@ -1,0 +1,201 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+const limit = (x) => Math.max(0, Math.min(1, x));
+export default function LoomicEnergyCable() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const layer = ref.current;
+    const page = layer.parentElement;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+    let frame = 0,
+      current = null;
+    const paths = [...layer.querySelectorAll(".lm-wire-path")];
+    const charger = layer.querySelector(".lm-wire-charger");
+    const plug = layer.querySelector(".lm-wire-plug");
+    const hole = layer.querySelector(".lm-wire-hole");
+    const pulse = layer.querySelector(".lm-wire-current");
+    const status = layer.querySelector(".lm-wire-status");
+    const label = layer.querySelector(".lm-wire-label");
+    let lastLabel = "";
+    const draw = () => {
+      const intro = page.querySelector(".lm-intro");
+      const h = innerHeight;
+      const start = intro.offsetHeight * 0.15;
+      const end = page.querySelector(".lm-footer").offsetTop - h * 0.7;
+      const goal = limit((scrollY - start) / (end - start));
+      const targetVisible =
+        scrollY > start - h * 0.1 && scrollY < end + h * 0.25;
+      current = current === null ? goal : current + (goal - current) * 0.12;
+      const p = current;
+      const connect = limit(p / 0.045);
+      const powered = limit((p - 0.035) / 0.04);
+      const travel = limit((p - 0.07) / 0.93);
+      const phase = travel * Math.PI * 7;
+      const amplitude = limit(travel * 8);
+      const x = 820 + Math.sin(phase) * 125 * amplitude;
+      const y = 180 + Math.sin(phase * 0.7) * 70 * amplitude;
+      const gap = (1 - connect) * 90;
+      const a = 160 + Math.sin(phase + 0.6) * 210;
+      const b = 820 + Math.cos(phase * 0.9) * 145;
+      const c = 190 + Math.sin(phase * 1.2) * 140;
+      const d = `M ${x} ${y + gap} C ${x + 25} ${y + 160} ${a} 70 ${a} 300 C ${a} 540 ${b} 200 ${b} 430 C ${b} 680 ${c} 370 ${c} 640 C ${c} 810 650 600 650 870`;
+      paths.forEach((path) => path.setAttribute("d", d));
+      charger.setAttribute("transform", `translate(${x - 47} ${y - 119})`);
+      charger.style.opacity = 1 - limit((p - 0.06) / 0.065);
+      plug.setAttribute(
+        "transform",
+        `translate(${x} ${y + gap}) rotate(${Math.sin(phase) * 13 * amplitude})`,
+      );
+      plug.style.opacity = 1 - limit((p - 0.09) / 0.07);
+      layer.style.opacity = targetVisible
+        ? Math.min(1, limit((scrollY - start + h * 0.1) / (h * 0.2)))
+        : 0;
+      pulse.style.opacity = powered;
+      layer.style.setProperty("--wire-power", powered);
+      layer.style.setProperty("--wire-phase", travel);
+      const behind = (Math.sin(phase + 0.3) + 1) / 2;
+      hole.setAttribute("rx", 160 + behind * 200);
+      hole.setAttribute("ry", 190 + behind * 140);
+      hole.setAttribute("cx", 500 + Math.sin(phase * 0.8) * 45);
+      status.style.opacity = 1 - limit((p - 0.13) / 0.04);
+      const text =
+        connect < 0.96
+          ? "CONNECT THE ESSENTIALS"
+          : powered < 0.95
+            ? "POWER FLOWS THROUGH"
+            : "EVERYTHING, CONNECTED";
+      if (text !== lastLabel) {
+        label.textContent = text;
+        lastLabel = text;
+      }
+      frame =
+        Math.abs(goal - current) > 0.00008 ? requestAnimationFrame(draw) : 0;
+    };
+    const update = () => {
+      if (!frame) frame = requestAnimationFrame(draw);
+    };
+    addEventListener("scroll", update, {
+      passive: true,
+    });
+    addEventListener("resize", update);
+    draw();
+    return () => {
+      removeEventListener("scroll", update);
+      removeEventListener("resize", update);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
+  return (
+    <div className="lm-energy-cable" ref={ref} aria-hidden="true">
+      <svg
+        viewBox="0 0 1000 800"
+        preserveAspectRatio="none"
+        className="lm-energy-svg"
+      >
+        <defs>
+          <linearGradient id="lm-wire-metal" x1="0" y1="0" x2="1" y2="1">
+            <stop stopColor="#d8d4d0" />
+            <stop offset=".45" stopColor="#5f6065" />
+            <stop offset="1" stopColor="#1a1a20" />
+          </linearGradient>
+          <linearGradient id="lm-wire-charge" x1="0" y1="0" x2="0" y2="1">
+            <stop stopColor="#49464f" />
+            <stop offset="1" stopColor="#141219" />
+          </linearGradient>
+          <linearGradient id="lm-wire-heat" x1="0" y1="0" x2="1" y2="1">
+            <stop stopColor="#ffdb9c" />
+            <stop offset=".45" stopColor="#ff681e" />
+            <stop offset="1" stopColor="#d540b7" />
+          </linearGradient>
+          <mask id="lm-wire-depth">
+            <rect width="1000" height="800" fill="white" />
+            <ellipse
+              className="lm-wire-hole"
+              cx="500"
+              cy="400"
+              rx="250"
+              ry="260"
+              fill="black"
+            />
+          </mask>
+        </defs>
+        <g mask="url(#lm-wire-depth)" fill="none" strokeLinecap="round">
+          <path className="lm-wire-path lm-wire-shadow" />
+          <path className="lm-wire-path lm-wire-body" />
+          <path className="lm-wire-path lm-wire-braid" />
+          <path className="lm-wire-path lm-wire-light" />
+          <path className="lm-wire-path lm-wire-current" pathLength="1000" />
+        </g>
+        <g className="lm-wire-charger">
+          <rect x="24" y="-20" width="9" height="27" rx="2" fill="#b4b0ae" />
+          <rect x="59" y="-20" width="9" height="27" rx="2" fill="#b4b0ae" />
+          <rect
+            width="94"
+            height="100"
+            rx="22"
+            fill="url(#lm-wire-charge)"
+            stroke="#aaa3"
+          />
+          <rect
+            x="9"
+            y="8"
+            width="76"
+            height="82"
+            rx="17"
+            fill="none"
+            stroke="#ffffff0e"
+          />
+          <text
+            x="47"
+            y="44"
+            textAnchor="middle"
+            fill="#ddd4c9"
+            fontSize="9"
+            letterSpacing="1.3"
+          >
+            LOOMIC
+          </text>
+          <circle cx="47" cy="62" r="2.5" fill="#fa783d" />
+          <rect
+            x="29"
+            y="95"
+            width="36"
+            height="9"
+            rx="4"
+            fill="#09090d"
+            stroke="#90818a"
+          />
+          <rect x="35" y="98" width="24" height="3" rx="1" fill="#ff8b45" />
+        </g>
+        <g className="lm-wire-plug">
+          <rect
+            x="-13"
+            y="-19"
+            width="26"
+            height="20"
+            rx="6"
+            fill="url(#lm-wire-metal)"
+          />
+          <rect x="-17" y="-3" width="34" height="37" rx="10" fill="#d7d2cb" />
+          <rect
+            x="-12"
+            y="3"
+            width="24"
+            height="24"
+            rx="6"
+            fill="none"
+            stroke="#7775"
+          />
+          <rect x="-8" y="31" width="16" height="16" rx="5" fill="#bab4ae" />
+        </g>
+      </svg>
+      <div className="lm-wire-status">
+        <span className="lm-wire-dot" />
+        <span className="lm-wire-label">CONNECT THE ESSENTIALS</span>
+        <small>SCROLL TO ENERGIZE</small>
+      </div>
+    </div>
+  );
+}

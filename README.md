@@ -1,42 +1,61 @@
-# Abstergo Technology website
+# Abstergo Technology — clean source export
 
-Next.js App Router + Tailwind CSS. All application source uses JavaScript/JSX; no TypeScript.
+Complete website source, including the Loomic page, original assets, preloader and scroll animations. This export reorganizes the accepted frontend without redesigning it.
 
 ## Run locally
 
-Use Node.js 22 or later. In this folder run:
+Use Node.js 22.13 or newer and pnpm 11.25.0 (the version pinned in `package.json`).
 
 ```bash
-npm install
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Open http://localhost:3000.
-
-## Production
+Open the URL printed in the terminal; visit `/loomic` for the Loomic page.
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
-## Main files
+The existing application uses React with Next.js App Router conventions, Vinext/Vite, Tailwind CSS v4, GSAP and Lenis. The custom website components are JavaScript/JSX. Existing starter infrastructure and shared UI utilities include TypeScript; their toolchain is retained.
 
-- `app/page.jsx`: page content, products, interactions and GSAP scroll animations.
-- `app/globals.css`: responsive design, portrait slider, background patterns and motion.
-- `app/layout.jsx`: English metadata and document layout.
-- `public/logo.png`: supplied original company logo.
+## Component map
 
-## Before client launch
+| Location | Responsibility |
+| --- | --- |
+| `app/page.jsx` | Home page composition and shared state |
+| `components/home/sections/` | Home navigation, hero, collections, editorial sections, footer and panels |
+| `components/home/hooks/` | Existing home effects, retained in their original order |
+| `components/home/Typography.jsx` | Shared home text animation components |
+| `components/home/data.js` | Home product stories and image references |
+| `components/LoomicExperience.jsx` | Loomic page composition |
+| `components/loomic/sections/` | Individual Loomic product and editorial sections |
+| `components/loomic/hooks/` | Loomic scroll and reveal effects |
+| `components/loomic/data.js` | Loomic chapter navigation and shared constants |
+| `components/LoomicHero.jsx` | Hero choreography |
+| `components/LoomicMotion.jsx` | Existing GSAP page motion |
+| `components/LoomicChair.jsx` | Existing chair animation |
+| `components/SitePreloader.jsx` | Shared preloader |
+| `components/Commerce.jsx` | Store state and actions |
+| `components/commerce/` | Store header, footer, content, views and persistence effects |
+| `public/` | Original logos, images and videos |
 
-- Product imagery currently loads from manufacturer CDN URLs. Internet access is required; check asset usage rights and move approved originals into `public/` if you need self-hosted assets.
-- Product names/configurations are showcase examples. Confirm actual inventory, pricing and availability.
-- Contact, repair and quote forms prepare requests locally only. They do not send email or store submissions on a server. Connect the client’s backend/email provider before launch.
-- Selection state lasts for the current page session.
-- Motion respects the visitor’s reduced-motion preference.
+## Styling
 
-The exported project runs with standard Next.js and does not require the hosted preview service.
+Tailwind v4 is imported in `app/globals.css`. Simple layout declarations are organized into grouped `@apply` utilities in the existing semantic CSS selectors. Complex responsive styles, keyframes, masks, gradients and scroll-controlled CSS variables remain explicit CSS.
 
+Existing class names are deliberately preserved because animation scripts query them. Keep the stylesheet import order and selector order when editing; later rules contain responsive and animation refinements. The refactor adds no extra DOM wrappers.
 
-## Multipage storefront
-Routes: /, /shop, /products/1 through /products/4, /cart, /checkout (quote preparation), /repair, /about and /contact. The cart is stored on this device with localStorage. Actual prices, inventory, payment processing and request delivery must be connected before accepting live orders. The quote and contact forms prepare a downloadable JSON request; they do not submit it.
+## Verification
+
+- Identical server-rendered HTML before and after for Home, Loomic, shop, product, cart, contact, repair, checkout and about.
+- Equivalent expanded custom CSS selector declarations across the four main stylesheets, including animation keyframes, after normalizing formatting and independent property order.
+- All 95 public assets are byte-for-byte unchanged.
+- Production build passed.
+
+These are structural/build checks; a new browser-based visual regression run was not performed for this export. Existing animation logic, event handlers, state, dependencies and DOM hooks are retained.
+
+The live site was not modified. Dependencies, build output, Git history, environment files and the hosted project's identity are excluded. The included `.openai/hosting.json` contains only empty optional binding declarations needed by the existing build configuration.
+
+Some laptop product images use the original external image URLs and require network access. Loomic product assets are included locally. Store request forms retain their existing behavior: they prepare downloadable requests rather than sending orders or messages.
