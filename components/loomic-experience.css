@@ -13,7 +13,7 @@
   color: inherit;
 }
 .lm-nav {
-  @apply absolute;
+  @apply fixed;
   z-index: 30;
   top: 24px;
   left: 4%;
