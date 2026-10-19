@@ -53,7 +53,9 @@ Official setup references:
 
 ## Latest update — 19 October 2026
 
-Includes smooth Loomic wheel scrolling synced with GSAP, smooth chapter navigation, the light sky-blue hero, animated vector logo gradient, dark Abstergo header logo, and the latest transparent product images.
+Purple (#7C3AED) is restored. The opening hero, Precision Pro presentation and detail cards, the marked charger cards, and Productivity/Sound/Power chapters use light backgrounds with readable dark text. Remaining sections retain the dark/graphite theme. The sticky header is solid light with the original black Abstergo logo. Smooth scrolling, logo gradient, sound controls and product animations are included.
+
+Download BOTH Part 1 and Part 2 ZIPs and extract them into the SAME location. Their Abstergo-Loomic folders must merge before installing or deploying. Each ZIP contains a different subset of the full project.
 
 ## Included updates
 

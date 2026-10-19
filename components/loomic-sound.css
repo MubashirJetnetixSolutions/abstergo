@@ -8,19 +8,19 @@
   gap: 9px;
   min-height: 44px;
   padding: 11px 16px;
-  border: 1px solid #E0F7FA29;
+  border: 1px solid #FFFFFF29;
   border-radius: 999px;
-  background: #2C2C2Ced;
-  color: #E0F7FA;
-  box-shadow: 0 5px 24px #2C2C2C22;
+  background: #0A0A0Aed;
+  color: #FFFFFF;
+  box-shadow: 0 5px 24px #0A0A0A22;
   font-size: 10px;
   letter-spacing: 0.08em;
   cursor: pointer;
   transition: border-color 180ms ease, background 180ms ease;
 }
-.lm-sound-control svg { color: #00BFFF; }
-.lm-sound-control:hover { background: #2C2C2C; border-color: #00BFFF; }
-.lm-sound-control:focus-visible { outline: 2px solid #00BFFF; outline-offset: 4px; }
+.lm-sound-control svg { color: #6B6B6F; }
+.lm-sound-control:hover { background: #0A0A0A; border-color: #6B6B6F; }
+.lm-sound-control:focus-visible { outline: 2px solid #6B6B6F; outline-offset: 4px; }
 @media (max-width: 700px) {
   .lm-sound-control { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); padding: 10px 13px; }
 }

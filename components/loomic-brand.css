@@ -1,11 +1,11 @@
 /* Loomic palette is scoped to this page; Abstergo keeps its own identity. */
 .lm-page {
-  --lm-jet: #2C2C2C;
-  --lm-graphite: #2C2C2C;
-  --lm-steel: #00BFFF;
-  --lm-silver: #00BFFF;
-  --lm-light: #E0F7FA;
-  --lm-pearl: #E0F7FA;
+  --lm-jet: #0A0A0A;
+  --lm-graphite: #0A0A0A;
+  --lm-steel: #6B6B6F;
+  --lm-silver: #6B6B6F;
+  --lm-light: #FFFFFF;
+  --lm-pearl: #FFFFFF;
   --orange: var(--lm-silver);
   background: var(--lm-pearl);
   color: var(--lm-jet);
@@ -23,7 +23,7 @@
 .lm-page .lm-nav a:focus-visible { outline-color: var(--lm-silver); }
 .lm-page .lm-nav-explore { background: var(--lm-pearl); color: var(--lm-jet); }
 .lm-page #voltis { background: var(--lm-jet); color: var(--lm-pearl); }
-.lm-page #voltis .lm-real-shot { background: radial-gradient(ellipse at 73% 48%, #2C2C2C, #2C2C2C 72%); }
+.lm-page #voltis .lm-real-shot { background: radial-gradient(ellipse at 73% 48%, #0A0A0A, #0A0A0A 72%); }
 .lm-page #voltis .lm-kicker { color: var(--lm-silver); }
 .lm-page #voltis .lm-link { color: var(--lm-pearl); }
 .lm-page #voltis .lm-voltis-details figure { background: var(--lm-graphite); }
@@ -36,13 +36,13 @@
 .lm-page .preloader-bottom { color: var(--lm-silver); }
 .lm-page .preloader-track { background: var(--lm-graphite); }
 .lm-page .preloader-track > div { background: var(--lm-silver); }
-.lm-page .site-preloader::before { background: radial-gradient(ellipse at 80% 80%, #00BFFF15, transparent 60%); }
+.lm-page .site-preloader::before { background: radial-gradient(ellipse at 80% 80%, #6B6B6F15, transparent 60%); }
 .lm-page .preloader-number > span,
 .lm-page .preloader-top > span { color: var(--lm-silver); }
 
 /* Keep the moving statement strip jet black. */
-.lm-page .lm-kinetic-band { background: #2C2C2C; color: #E0F7FA; }
-.lm-page .lm-kinetic-band i { color: #00BFFF; }
+.lm-page .lm-kinetic-band { background: #0A0A0A; color: #FFFFFF; }
+.lm-page .lm-kinetic-band i { color: #6B6B6F; }
 
 /* Transparent Pro still life: the products sit directly on the section. */
 .lm-page #voltis .lm-voltis-details {
@@ -60,43 +60,43 @@
 .lm-page #voltis .lm-voltis-details img { object-fit: contain; }
 
 /* Ultra opens the collection with a focused best-seller presentation. */
-.lm-page .lm-ultra-feature { background: #2C2C2C; color: #E0F7FA; }
+.lm-page .lm-ultra-feature { background: #0A0A0A; color: #FFFFFF; }
 .lm-page .lm-ultra-feature > .lm-real-shot {
-  background: radial-gradient(ellipse at 72% 50%, #2C2C2C, #2C2C2C 72%);
+  background: radial-gradient(ellipse at 72% 50%, #0A0A0A, #0A0A0A 72%);
 }
 .lm-page .lm-ultra-feature .lm-real-copy { top: 23%; }
 .lm-page .lm-ultra-feature .lm-real-copy h2 { font-size: clamp(48px, 5.5vw, 84px); }
-.lm-page .lm-ultra-feature .lm-real-copy .lm-kicker { display: block; color: #00BFFF; }
+.lm-page .lm-ultra-feature .lm-real-copy .lm-kicker { display: block; color: #6B6B6F; }
 .lm-page .lm-ultra-bestseller {
   display: inline-flex;
   align-items: center;
   gap: 9px;
   padding: 9px 14px;
   margin-bottom: 28px;
-  border: 1px solid #00BFFF;
+  border: 1px solid #6B6B6F;
   border-radius: 999px;
-  color: #E0F7FA;
+  color: #FFFFFF;
   font-size: 10px;
   letter-spacing: .12em;
 }
-.lm-page .lm-ultra-bestseller i { width: 5px; height: 5px; background: #E0F7FA; border-radius: 50%; }
-.lm-page .lm-ultra-feature .lm-real-ghost { color: #E0F7FA09; }
-.lm-page .lm-ultra-edit { padding: 100px 6%; background: #E0F7FA; color: #2C2C2C; }
+.lm-page .lm-ultra-bestseller i { width: 5px; height: 5px; background: #FFFFFF; border-radius: 50%; }
+.lm-page .lm-ultra-feature .lm-real-ghost { color: #FFFFFF09; }
+.lm-page .lm-ultra-edit { padding: 100px 6%; background: #FFFFFF; color: #0A0A0A; }
 .lm-page .lm-ultra-edit-heading { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px; margin-bottom: 50px; }
-.lm-page .lm-ultra-edit-heading .lm-kicker { width: 100%; color: #00BFFF; }
+.lm-page .lm-ultra-edit-heading .lm-kicker { width: 100%; color: #6B6B6F; }
 .lm-page .lm-ultra-edit-heading h2 { margin: 0; font-size: clamp(36px, 4.5vw, 68px); font-weight: 400; line-height: 1.05; letter-spacing: -.05em; }
-.lm-page .lm-ultra-edit-heading h2 em { color: #00BFFF; }
-.lm-page .lm-ultra-index { margin-left: auto; color: #00BFFF; font-size: 11px; letter-spacing: .1em; }
+.lm-page .lm-ultra-edit-heading h2 em { color: #6B6B6F; }
+.lm-page .lm-ultra-index { margin-left: auto; color: #6B6B6F; font-size: 11px; letter-spacing: .1em; }
 .lm-page .lm-ultra-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; }
 .lm-page .lm-ultra-gallery figure { margin: 0; min-width: 0; }
-.lm-page .lm-ultra-gallery figure > div { overflow: hidden; aspect-ratio: 1; background: #E0F7FA; }
+.lm-page .lm-ultra-gallery figure > div { overflow: hidden; aspect-ratio: 1; background: #FFFFFF; }
 .lm-page .lm-ultra-gallery img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.lm-page .lm-ultra-gallery figcaption { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid #E0F7FA; padding-top: 20px; font-size: 11px; }
-.lm-page .lm-ultra-gallery figcaption span { color: #00BFFF; }
+.lm-page .lm-ultra-gallery figcaption { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid #FFFFFF; padding-top: 20px; font-size: 11px; }
+.lm-page .lm-ultra-gallery figcaption span { color: #6B6B6F; }
 .lm-page .lm-ultra-use { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; margin-top: 80px; }
-.lm-page .lm-ultra-use figure { margin: 0; min-width: 0; background: #E0F7FA; overflow: hidden; }
+.lm-page .lm-ultra-use figure { margin: 0; min-width: 0; background: #FFFFFF; overflow: hidden; }
 .lm-page .lm-ultra-use img { display: block; width: 100%; height: 420px; object-fit: contain; }
-.lm-page .lm-ultra-use figcaption { padding-top: 22px; border-top: 1px solid #E0F7FA; color: #00BFFF; font-size: 10px; letter-spacing: .1em; }
+.lm-page .lm-ultra-use figcaption { padding-top: 22px; border-top: 1px solid #FFFFFF; color: #6B6B6F; font-size: 10px; letter-spacing: .1em; }
 @media (max-width: 760px) {
   .lm-page .lm-ultra-feature > .lm-real-shot { height: 105svh; min-height: 820px; }
   .lm-page .lm-ultra-feature .lm-real-copy { top: 7%; }
@@ -116,22 +116,22 @@
 
 /* Indigo / slate direction — scoped to Loomic. */
 .lm-page {
-  --lm-accent: #1E90FF;
-  --lm-accent-soft: #00BFFF;
-  --lm-ink: #2C2C2C;
-  --lm-surface: #E0F7FA;
-  --lm-orange: #1E90FF;
-  --lm-jet: #2C2C2C;
-  --lm-graphite: #2C2C2C;
-  --lm-steel: #00BFFF;
-  --lm-silver: #00BFFF;
-  --lm-light: #E0F7FA;
-  --lm-pearl: #E0F7FA;
+  --lm-accent: #0A0A0A;
+  --lm-accent-soft: #6B6B6F;
+  --lm-ink: #0A0A0A;
+  --lm-surface: #FFFFFF;
+  --lm-orange: #0A0A0A;
+  --lm-jet: #0A0A0A;
+  --lm-graphite: #0A0A0A;
+  --lm-steel: #6B6B6F;
+  --lm-silver: #6B6B6F;
+  --lm-light: #FFFFFF;
+  --lm-pearl: #FFFFFF;
 }
 .lm-page .lh-hero,
-.lm-page .lh-stage { background: #2C2C2C; color: #E0F7FA; }
+.lm-page .lh-stage { background: #0A0A0A; color: #FFFFFF; }
 .lm-page .lh-aurora {
-  background: radial-gradient(ellipse at 48% 43%, #1E90FF2e, transparent 53%), radial-gradient(ellipse at 90% 12%, #00BFFF1c, transparent 43%);
+  background: radial-gradient(ellipse at 48% 43%, #0A0A0A2e, transparent 53%), radial-gradient(ellipse at 90% 12%, #6B6B6F1c, transparent 43%);
 }
 .lm-page .lh-grid { opacity: .28; }
 .lm-page .lh-topline,
@@ -143,30 +143,30 @@
 .lm-page .lh-finale h2,
 .lm-page .lh-bottom,
 .lm-page .lh-product-info,
-.lm-page .lh-phase-step { color: #E0F7FA; }
+.lm-page .lh-phase-step { color: #FFFFFF; }
 .lm-page .lh-opening em,
 .lm-page .lh-chapter-title em,
-.lm-page .lh-finale em { color: #00BFFF; }
-.lm-page .lh-invitation p { color: #E0F7FA; opacity: .7; }
+.lm-page .lh-finale em { color: #6B6B6F; }
+.lm-page .lh-invitation p { color: #FFFFFF; opacity: .7; }
 .lm-page .lh-invitation button,
-.lm-page .lh-finale > a { background: #1E90FF; border-color: #00BFFF; color: #E0F7FA; }
-.lm-page .lh-phase-step.is-active { color: #00BFFF; }
-.lm-page .lh-scroll-pill { border-color: #E0F7FA44; }
+.lm-page .lh-finale > a { background: #0A0A0A; border-color: #6B6B6F; color: #FFFFFF; }
+.lm-page .lh-phase-step.is-active { color: #6B6B6F; }
+.lm-page .lh-scroll-pill { border-color: #FFFFFF44; }
 .lm-page .lh-scroll-pill i,
-.lm-page .lh-progress i { background: #00BFFF; }
-.lm-page .lm-kinetic-band { background: #2C2C2C; color: #E0F7FA; }
-.lm-page .lm-kinetic-band i { color: #00BFFF; }
+.lm-page .lh-progress i { background: #6B6B6F; }
+.lm-page .lm-kinetic-band { background: #0A0A0A; color: #FFFFFF; }
+.lm-page .lm-kinetic-band i { color: #6B6B6F; }
 .lm-page .lm-real-shot .lm-scene-atmosphere {
-  background: radial-gradient(ellipse at 72% 48%, #1E90FF29, transparent 67%);
+  background: radial-gradient(ellipse at 72% 48%, #0A0A0A29, transparent 67%);
 }
 .lm-page #mobile-power > .lm-real-shot,
 .lm-page #voltis > .lm-real-shot {
-  background: radial-gradient(ellipse at 76% 50%, #1E90FF1c, transparent 65%), #2C2C2C;
+  background: radial-gradient(ellipse at 76% 50%, #0A0A0A1c, transparent 65%), #0A0A0A;
 }
 .lm-page #mobile-power .lm-real-copy,
-.lm-page #voltis .lm-real-copy { color: #E0F7FA; }
-.lm-page .lm-ultra-bestseller { border-color: #00BFFF; color: #E0F7FA; background: #1E90FF2b; }
-.lm-page .lm-ultra-bestseller i { background: #00BFFF; }
+.lm-page #voltis .lm-real-copy { color: #FFFFFF; }
+.lm-page .lm-ultra-bestseller { border-color: #6B6B6F; color: #FFFFFF; background: #0A0A0A2b; }
+.lm-page .lm-ultra-bestseller i { background: #6B6B6F; }
 .lm-page #mobile-power > .lm-real-shot > img,
 .lm-page #voltis > .lm-real-shot > img { width: 60%; right: 2%; top: 11%; height: 80%; object-fit: contain; }
 .lm-page .lm-ultra-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -180,13 +180,13 @@
   margin-top: 80px;
   padding: 60px 6%;
   border-radius: 28px;
-  background: radial-gradient(ellipse at 80% 50%, #1E90FF29, transparent 65%), #2C2C2C;
-  color: #E0F7FA;
+  background: radial-gradient(ellipse at 80% 50%, #0A0A0A29, transparent 65%), #0A0A0A;
+  color: #FFFFFF;
   overflow: hidden;
 }
-.lm-page .lm-ultra-pair-story .lm-kicker { color: #00BFFF; }
+.lm-page .lm-ultra-pair-story .lm-kicker { color: #6B6B6F; }
 .lm-page .lm-ultra-pair-story h2 { font-size: clamp(36px, 4.5vw, 66px); font-weight: 400; letter-spacing: -.045em; line-height: 1.08; }
-.lm-page .lm-ultra-pair-story h2 em { color: #00BFFF; }
+.lm-page .lm-ultra-pair-story h2 em { color: #6B6B6F; }
 .lm-page .lm-ultra-pair-story p { font-size: 14px; line-height: 1.8; max-width: 340px; opacity: .7; }
 .lm-page .lm-ultra-pair-story > img { width: 100%; height: 520px; object-fit: contain; }
 
@@ -204,7 +204,7 @@
   inset: -70% 5%;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(ellipse, #00BFFF2b, transparent 65%);
+  background: radial-gradient(ellipse, #6B6B6F2b, transparent 65%);
   animation: lm-logo-breath 2.8s ease-in-out infinite;
   animation-play-state: var(--logo-beat-play, running);
 }
@@ -231,34 +231,34 @@
   .lm-page .lh-logo-beat::before { animation: none; will-change: auto; }
 }
 
-/* Light arrival: charcoal typography, sky accents, clean white canvas. */
-.lm-page .lh-hero,.lm-page .lh-stage { background: #FFFFFF; color: #2C2C2C; }
-.lm-page .lh-aurora { background: radial-gradient(ellipse at 75% 25%,#E0F7FA,transparent 52%),radial-gradient(ellipse at 25% 70%,#00BFFF0a,transparent 48%); }
+/* Light arrival: black typography, neutral accents, clean white canvas. */
+.lm-page .lh-hero,.lm-page .lh-stage { background: #FFFFFF; color: #0A0A0A; }
+.lm-page .lh-aurora { background: radial-gradient(ellipse at 75% 25%,#FFFFFF,transparent 52%),radial-gradient(ellipse at 25% 70%,#6B6B6F0a,transparent 48%); }
 .lm-page .lh-film { display: none; }
 .lm-page .lh-topline,.lm-page .lh-opening,.lm-page .lh-opening h1,
 .lm-page .lh-chapter-title,.lm-page .lh-chapter-title h2,
 .lm-page .lh-finale,.lm-page .lh-finale h2,.lm-page .lh-bottom,
 .lm-page .lh-product-info,.lm-page .lh-phase-step,
-.lm-page .lh-invitation p,.lm-page .lh-scroll-cue { color: #2C2C2C; }
+.lm-page .lh-invitation p,.lm-page .lh-scroll-cue { color: #0A0A0A; }
 .lm-page .lh-product-info small,.lm-page .lh-product-info > span,
 .lm-page .lh-edition,.lm-page .lh-chapter-title > span,
-.lm-page .lh-finale > span { color: #2C2C2C; }
-.lm-page .lh-opening em,.lm-page .lh-chapter-title em,.lm-page .lh-finale em { color: #1E90FF; }
-.lm-page .lh-scroll-pill { border-color: #2C2C2C55; }
-.lm-page .lh-phase-steps > i { background: #2C2C2C22; }
-.lm-page .lh-invitation button,.lm-page .lh-finale > a { background: #E0F7FA; color: #2C2C2C; border-color: #1E90FF66; }
-.lm-page .lh-invitation button:hover,.lm-page .lh-finale > a:hover { background: #00BFFF; color: #2C2C2C !important; }
-.lm-page .lm-nav { color: #2C2C2C; }
+.lm-page .lh-finale > span { color: #0A0A0A; }
+.lm-page .lh-opening em,.lm-page .lh-chapter-title em,.lm-page .lh-finale em { color: #0A0A0A; }
+.lm-page .lh-scroll-pill { border-color: #0A0A0A55; }
+.lm-page .lh-phase-steps > i { background: #0A0A0A22; }
+.lm-page .lh-invitation button,.lm-page .lh-finale > a { background: #FFFFFF; color: #0A0A0A; border-color: #0A0A0A66; }
+.lm-page .lh-invitation button:hover,.lm-page .lh-finale > a:hover { background: #6B6B6F; color: #0A0A0A !important; }
+.lm-page .lm-nav { color: #0A0A0A; }
 .lm-page .lm-partner img { filter: none; }
 .lm-page .lm-partner img.lm-abstergo-logo { filter: none; }
-.lm-page .lm-nav-explore { background: #E0F7FA; color: #2C2C2C; border-color: #1E90FF33; }
-.lm-page .lm-kicker { color: #1E90FF; }
-.lm-page a.lm-link:hover,.lm-page .lm-footer-top > a:hover,.lm-page .lm-charger-colorways a:hover { color: #2C2C2C !important; }
-.lm-page a.lm-link > svg { color: #2C2C2C; }
+.lm-page .lm-nav-explore { background: #FFFFFF; color: #0A0A0A; border-color: #0A0A0A33; }
+.lm-page .lm-kicker { color: #0A0A0A; }
+.lm-page a.lm-link:hover,.lm-page .lm-footer-top > a:hover,.lm-page .lm-charger-colorways a:hover { color: #0A0A0A !important; }
+.lm-page a.lm-link > svg { color: #0A0A0A; }
 .lm-page #pulse-m > .lm-real-shot > img { object-fit: contain; width: 55%; right: 2%; top: 13%; height: 74%; }
 @media(max-width:760px) {
  .lm-page #pulse-m > .lm-real-shot > img { width: 94%; right: 3%; top: 45%; height: 51%; }
- .lm-page .lm-nav nav.lm-menu-open { background: #FFFFFF; color: #2C2C2C; }
+ .lm-page .lm-nav nav.lm-menu-open { background: #FFFFFF; color: #0A0A0A; }
 }
 
 /* Staggered color travel stays inside the vector, independent of scroll zoom. */
@@ -266,10 +266,258 @@
 .lm-page .lm-logo-gradient-stop:nth-child(2) { animation-delay: -2.66s; }
 .lm-page .lm-logo-gradient-stop:nth-child(3) { animation-delay: -5.33s; }
 @keyframes lm-logo-color-flow {
-  0%,100% { stop-color: #2C2C2C; }
-  33% { stop-color: #1E90FF; }
-  66% { stop-color: #00BFFF; }
+  0%,100% { stop-color: #0A0A0A; }
+  33% { stop-color: #0A0A0A; }
+  66% { stop-color: #6B6B6F; }
 }
 @media(prefers-reduced-motion:reduce) {
   .lm-page .lm-logo-gradient-stop { animation: none; }
 }
+
+/* Client palette: white primary, black secondary, cool light gray accents. */
+.lm-page { --lm-light:#E4E4E6; --lm-pearl:#FFFFFF; --lm-accent:#0A0A0A; --lm-accent-soft:#A9AAAE; --lm-surface:#FFFFFF; --lm-orange:#0A0A0A; background:#FFFFFF; color:#0A0A0A; }
+.lm-page .lh-aurora { background:radial-gradient(ellipse at 75% 25%,#E4E4E6,transparent 55%); }
+.lm-page .lh-logo-beat::before { background:radial-gradient(ellipse,#A9AAAE22,transparent 65%); }
+.lm-page .lh-opening em,.lm-page .lh-chapter-title em,.lm-page .lh-finale em { color:#6B6B6F; }
+.lm-page .lh-invitation button,.lm-page .lh-finale > a,.lm-page .lm-nav-explore { background:#0A0A0A; color:#FFFFFF; border-color:#0A0A0A; }
+.lm-page .lh-invitation button:hover,.lm-page .lh-finale > a:hover { background:#2E2E30; color:#FFFFFF !important; }
+.lm-page .lm-nav-explore > svg { background:#FFFFFF; color:#0A0A0A; }
+.lm-page .lm-ultra-feature,.lm-page #voltis { background:#FFFFFF; color:#0A0A0A; }
+.lm-page .lm-real-shot,.lm-page #mobile-power > .lm-real-shot,.lm-page #voltis > .lm-real-shot { background:radial-gradient(ellipse at 75% 50%,#E4E4E680,transparent 65%),#FFFFFF; color:#0A0A0A; }
+.lm-page .lm-real-shot .lm-real-copy,.lm-page #mobile-power .lm-real-copy,.lm-page #voltis .lm-real-copy { color:#0A0A0A; }
+.lm-page .lm-real-shot .lm-kicker,.lm-page .lm-ultra-feature .lm-real-copy .lm-kicker { color:#6B6B6F; }
+.lm-page .lm-real-shot .lm-link,.lm-page #voltis .lm-link { color:#0A0A0A; }
+.lm-page .lm-real-shot .lm-real-ghost,.lm-page .lm-ultra-feature .lm-real-ghost { color:#0A0A0A08; }
+.lm-page .lm-ultra-bestseller { color:#0A0A0A; background:#E4E4E6; border-color:#A9AAAE; }
+.lm-page .lm-ultra-bestseller i { background:#0A0A0A; }
+.lm-page #voltis .lm-voltis-details figcaption { color:#0A0A0A; border-color:#E4E4E6; }
+.lm-page #voltis .lm-voltis-details figcaption span { color:#6B6B6F; }
+.lm-page .lm-ultra-gallery figcaption { border-color:#E4E4E6; }
+.lm-page .lm-real-shot .lm-scene-atmosphere { background:radial-gradient(ellipse at 72% 48%,#A9AAAE22,transparent 67%); }
+.lm-page .lm-real-shot .lm-real-copy em { color:#6B6B6F; }
+.lm-page a.lm-link > svg { background:#0A0A0A; color:#FFFFFF; }
+.lm-page a.lm-link::before { background:#0A0A0A; }
+.lm-page a.lm-link:hover { color:#FFFFFF !important; border-color:#0A0A0A; }
+.lm-page a.lm-link:hover > svg { background:#FFFFFF; color:#0A0A0A; }
+@keyframes lm-logo-color-flow {
+  0%,100% { stop-color:#0A0A0A; }
+  33% { stop-color:#6B6B6F; }
+  66% { stop-color:#A9AAAE; }
+}
+
+/* Electric violet is an accent; the product canvas stays white and neutral. */
+.lm-page { --lm-accent:#7C3AED; --lm-accent-soft:#A78BFA; --lm-orange:#7C3AED; }
+.lm-page .lh-invitation button,.lm-page .lh-finale > a,.lm-page .lm-nav-explore {
+ background:#7C3AED; border-color:#7C3AED; color:#FFFFFF;
+}
+.lm-page .lh-invitation button:hover,.lm-page .lh-finale > a:hover,.lm-page .lm-nav-explore:hover {
+ background:#6D28D9; border-color:#6D28D9; color:#FFFFFF !important;
+}
+.lm-page .lm-nav-explore > svg { background:#FFFFFF; color:#7C3AED; }
+.lm-page a.lm-link { border-color:#7C3AED66; }
+.lm-page a.lm-link > svg,.lm-page a.lm-link::before { background:#7C3AED; }
+.lm-page a.lm-link > svg { color:#FFFFFF; }
+.lm-page a.lm-link:hover { border-color:#7C3AED; color:#FFFFFF !important; box-shadow:0 8px 25px #7C3AED18; }
+.lm-page a.lm-link:hover > svg { background:#FFFFFF; color:#7C3AED; }
+.lm-page .lm-kicker,.lm-page .lm-real-shot .lm-kicker,
+.lm-page .lm-ultra-feature .lm-real-copy .lm-kicker { color:#7C3AED; }
+.lm-page .lm-ultra-bestseller { background:#7C3AED0D; border-color:#7C3AED44; color:#6D28D9; }
+.lm-page .lm-ultra-bestseller i,.lm-page .lh-topline i,.lm-page .lh-scroll-pill i,
+.lm-page .lh-progress i,.lm-page .lm-world-nav a:hover,
+.lm-page .lm-world-nav a[aria-current="true"] { background:#7C3AED; }
+.lm-page .lh-phase-step.is-active,.lm-page .lm-nav nav > a:hover { color:#7C3AED; }
+.lm-page .lh-logo-beat::before { background:radial-gradient(ellipse,#7C3AED16,transparent 65%); }
+.lm-page .lm-precision-rule i { background:#7C3AED; }
+.lm-page a:focus-visible,.lm-page button:focus-visible { outline-color:#7C3AED; }
+@keyframes lm-logo-color-flow {
+ 0%,100% { stop-color:#0A0A0A; }
+ 33% { stop-color:#7C3AED; }
+ 66% { stop-color:#6B6B6F; }
+}
+
+/* Dark / electric violet / graphite: the final Loomic theme. */
+.lm-page {
+ --lm-jet:#0A0A0F; --lm-graphite:#1C1C24; --lm-steel:#A6A6B3;
+ --lm-silver:#C6C6D0; --lm-light:#E4E4E6; --lm-pearl:#F5F5F7;
+ --lm-ink:#F5F5F7; --lm-surface:#14141B; --lm-accent:#7C3AED;
+ --lm-accent-soft:#A78BFA; background:#0A0A0F; color:#F5F5F7;
+}
+.lm-page > section,.lm-page .lm-real-shot,.lm-page #mobile-power,
+.lm-page #voltis,.lm-page .lm-ultra-feature,.lm-page .lm-ultra-edit,
+.lm-page .lm-type-interlude,.lm-page .lm-collection,
+.lm-page .lm-footer,.lm-page .lm-chapter-stage {
+ background:#0A0A0F; color:#F5F5F7;
+}
+.lm-page .lh-hero,.lm-page .lh-stage { background:#0A0A0F; color:#F5F5F7; }
+.lm-page .lh-aurora { background:radial-gradient(ellipse at 70% 30%,#7C3AED1A,transparent 56%),radial-gradient(ellipse at 20% 70%,#A6A6B30A,transparent 50%); }
+.lm-page .lh-topline,.lm-page .lh-opening,.lm-page .lh-opening h1,
+.lm-page .lh-chapter-title,.lm-page .lh-chapter-title h2,
+.lm-page .lh-finale,.lm-page .lh-finale h2,.lm-page .lh-bottom,
+.lm-page .lh-product-info,.lm-page .lh-phase-step,.lm-page .lh-scroll-cue,
+.lm-page .lh-product-info > span,.lm-page .lh-invitation p { color:#F5F5F7; }
+.lm-page .lh-product-info small,.lm-page .lh-edition,.lm-page .lh-chapter-title > span,
+.lm-page .lh-finale > span { color:#A6A6B3; }
+.lm-page .lh-opening em,.lm-page .lh-chapter-title em,.lm-page .lh-finale em { color:#A78BFA; }
+.lm-page .lh-scroll-pill { border-color:#A6A6B366; }
+.lm-page .lh-phase-steps > i { background:#A6A6B333; }
+.lm-page > header.lm-nav { background:#14141BED; border-color:#A6A6B333; color:#F5F5F7; }
+.lm-page .lm-partner img { filter:invert(1); }
+.lm-page .lm-partner img.lm-abstergo-logo { filter:none; }
+.lm-page .lm-nav nav > a:hover,.lm-page .lh-phase-step.is-active { color:#A78BFA; }
+.lm-page .lm-real-shot,.lm-page #mobile-power > .lm-real-shot,
+.lm-page #voltis > .lm-real-shot {
+ background:radial-gradient(ellipse at 76% 50%,#7C3AED16,transparent 62%),#0A0A0F;
+ color:#F5F5F7;
+}
+.lm-page .lm-real-shot .lm-real-copy,.lm-page #mobile-power .lm-real-copy,
+.lm-page #voltis .lm-real-copy,.lm-page .lm-real-shot .lm-link,
+.lm-page #voltis .lm-link { color:#F5F5F7; }
+.lm-page .lm-real-shot .lm-real-copy h2 { color:#F5F5F7; }
+.lm-page .lm-real-shot .lm-real-copy p { color:#A6A6B3; }
+.lm-page .lm-real-shot .lm-real-copy em { color:#A78BFA; }
+.lm-page .lm-kicker,.lm-page .lm-real-shot .lm-kicker,
+.lm-page .lm-ultra-feature .lm-real-copy .lm-kicker { color:#A78BFA; }
+.lm-page .lm-real-shot .lm-real-ghost,.lm-page .lm-ultra-feature .lm-real-ghost { color:#F5F5F708; }
+.lm-page .lm-real-shot .lm-scene-atmosphere { background:radial-gradient(ellipse at 72% 48%,#7C3AED1F,transparent 67%); }
+.lm-page .lm-real-shot > img,.lm-page .lm-product > img { mix-blend-mode:normal; }
+.lm-page .lm-ultra-edit,.lm-page .lm-precision-details,.lm-page .lm-audio-detail-grid,
+.lm-page .lm-speaker-details,.lm-page .lm-charger-angles,.lm-page .lm-voltis-details,
+.lm-page .lm-u45-gallery { background:#14141B; color:#F5F5F7; }
+.lm-page .lm-ultra-gallery figure > div,.lm-page .lm-precision-details figure,
+.lm-page .lm-audio-detail-grid figure,.lm-page .lm-speaker-details figure,
+.lm-page .lm-u45-gallery figure { background:#1C1C24; border-color:#A6A6B322; }
+.lm-page .lm-ultra-gallery figcaption,.lm-page #voltis .lm-voltis-details figcaption {
+ color:#E4E4E6; border-color:#A6A6B333;
+}
+.lm-page #voltis .lm-voltis-details figcaption span { color:#A78BFA; }
+.lm-page .lm-ultra-pair-story { background:radial-gradient(ellipse at 80% 50%,#7C3AED22,transparent 65%),#1C1C24; color:#F5F5F7; }
+.lm-page .lm-ultra-bestseller { background:#7C3AED22; color:#C4B5FD; border-color:#7C3AED77; }
+.lm-page .lm-type-interlude .lm-display-type { color:#E4E4E6; }
+.lm-page .lm-kinetic-band { background:#7C3AED; color:#FFFFFF; }
+.lm-page .lm-kinetic-band i { color:#C4B5FD; }
+.lm-page .lm-collection::before { background:radial-gradient(ellipse at 25% 25%,#7C3AED1A,transparent 45%); }
+.lm-page .lm-tile > div { background:#1C1C24; }
+.lm-page .lm-footer-abstergo { filter:none; }
+.lm-page .lm-footer-logo { filter:invert(1); }
+.lm-page .lm-world-nav a { background:#A6A6B3; }
+.lm-page .lm-world-nav a[aria-current="true"] { background:#A78BFA; }
+@keyframes lm-logo-color-flow {
+ 0%,100% { stop-color:#E4E4E6; }
+ 33% { stop-color:#A78BFA; }
+ 66% { stop-color:#7C3AED; }
+}
+@media(max-width:760px) {
+ .lm-page .lm-nav nav.lm-menu-open { background:#14141B; color:#F5F5F7; }
+}
+
+/* Light opening only; subsequent product chapters keep the dark theme. */
+.lm-page .lh-hero,.lm-page .lh-stage { background:#F5F5F7; color:#0A0A0F; }
+.lm-page .lh-aurora { background:radial-gradient(ellipse at 74% 25%,#7C3AED0A,transparent 55%),radial-gradient(ellipse at 25% 70%,#E4E4E6,transparent 55%); }
+.lm-page .lh-topline,.lm-page .lh-opening,.lm-page .lh-opening h1,
+.lm-page .lh-chapter-title,.lm-page .lh-chapter-title h2,
+.lm-page .lh-finale,.lm-page .lh-finale h2,.lm-page .lh-bottom,
+.lm-page .lh-product-info,.lm-page .lh-phase-step,.lm-page .lh-scroll-cue,
+.lm-page .lh-product-info > span,.lm-page .lh-invitation p { color:#0A0A0F; }
+.lm-page .lh-product-info small,.lm-page .lh-edition,
+.lm-page .lh-chapter-title > span,.lm-page .lh-finale > span { color:#6B6B6F; }
+.lm-page .lh-opening em,.lm-page .lh-chapter-title em,.lm-page .lh-finale em,
+.lm-page .lh-phase-step.is-active { color:#7C3AED; }
+.lm-page .lh-scroll-pill { border-color:#6B6B6F66; }
+.lm-page .lh-phase-steps > i { background:#6B6B6F33; }
+.lm-page .lh-logo .lm-logo-gradient-stop { animation-name:lm-light-logo-flow; }
+@keyframes lm-light-logo-flow {
+ 0%,100% { stop-color:#0A0A0F; }
+ 33% { stop-color:#7C3AED; }
+ 66% { stop-color:#6B6B6F; }
+}
+
+/* Targeted light product cards and final chapters, as marked in review. */
+.lm-page .lm-u45-gallery figure:nth-child(-n+2) { background:#F5F5F7; color:#0A0A0F; border-color:#E4E4E6; }
+.lm-page .lm-u45-gallery figure:nth-child(-n+2) img { background:#F5F5F7; }
+.lm-page .lm-u45-gallery figure:nth-child(-n+2) figcaption { color:#0A0A0F; }
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-stage { background:#F5F5F7; color:#0A0A0F; }
+.lm-page :is(#productivity,#sound,#power) .lm-scene-grid {
+ background-image:linear-gradient(#0A0A0F08 1px,transparent 1px),linear-gradient(90deg,#0A0A0F08 1px,transparent 1px);
+}
+.lm-page :is(#productivity,#sound,#power) .lm-scene-halo { background:radial-gradient(ellipse,#7C3AED10,transparent 65%); }
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-copy,
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-copy h2,
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-copy .lm-link { color:#0A0A0F; }
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-copy p,
+.lm-page :is(#productivity,#sound,#power) .lm-scene-top,
+.lm-page :is(#productivity,#sound,#power) .lm-chapter-bottom,
+.lm-page :is(#productivity,#sound,#power) .lm-power-image-label { color:#6B6B6F; }
+.lm-page :is(#productivity,#sound,#power) .lm-scene-word { color:#0A0A0F08; }
+.lm-page .lm-power-cinema-stage > .lm-power-cinema-detail {
+ left:25%; right:auto; width:50%; top:18%; height:64%; object-fit:contain;
+}
+@media(max-width:760px) {
+ .lm-page .lm-power-cinema-stage > .lm-power-cinema-detail { left:12%; width:76%; top:30%; height:48%; }
+}
+
+/* Purple accents restored; latest layout and contrast fixes retained. */
+.lm-page > header.lm-nav {
+ background:linear-gradient(120deg,#FFFFFF16,#FFFFFF05),#14141B8C;
+ border:1px solid #FFFFFF30;
+ backdrop-filter:blur(24px) saturate(145%);
+ -webkit-backdrop-filter:blur(24px) saturate(145%);
+ box-shadow:inset 0 1px 0 #FFFFFF24,0 8px 32px #00000018;
+}
+.lm-page .lh-invitation button,.lm-page .lh-finale > a,
+.lm-page .lm-nav-explore,.lm-page a.lm-link > svg { color:#FFFFFF; }
+.lm-page a.lm-link:hover { color:#FFFFFF !important; }
+.lm-page .lm-kinetic-band { color:#FFFFFF; }
+.lm-page .lm-kinetic-band i { color:#EDE9FE; }
+.lm-page .lh-phase-step.is-active { color:#6D28D9; }
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+ .lm-page > header.lm-nav { background:#14141BF2; }
+}
+
+/* Solid light navigation stays readable over both light and dark chapters. */
+.lm-page > header.lm-nav {
+ background:#F5F5F7; color:#0A0A0F; border:1px solid #D9D9DF;
+ backdrop-filter:none; -webkit-backdrop-filter:none;
+ box-shadow:0 6px 24px #00000010; padding-right:18px;
+}
+.lm-page .lm-partner img,.lm-page .lm-partner img.lm-abstergo-logo { filter:none; }
+.lm-page .lm-nav nav > a { color:#0A0A0F; }
+.lm-page .lm-nav nav > a:hover { color:#6D28D9; }
+.lm-page .lm-menu { color:#0A0A0F; }
+.lm-page .lm-nav-explore { margin-left:10px; }
+.lm-page #precision-pro .lm-display-type,
+.lm-page #precision-pro .lm-real-copy h2 { color:#F5F5F7; -webkit-text-fill-color:#F5F5F7; }
+.lm-page #precision-pro .lm-real-copy h2 span { color:inherit; -webkit-text-fill-color:inherit; }
+.lm-page #precision-pro .lm-real-copy h2 em { color:#A78BFA !important; -webkit-text-fill-color:#A78BFA; }
+.lm-page #precision-pro .lm-real-copy p,.lm-page #precision-pro .lm-precision-caption { color:#C6C6D0; }
+.lm-page #precision-pro .lm-real-copy .lm-link { color:#F5F5F7; }
+@media(max-width:760px) {
+ .lm-page .lm-nav nav.lm-menu-open { background:#F5F5F7; color:#0A0A0F; }
+}
+
+/* Precision is one explicit light surface, with matching readable typography. */
+.lm-page #precision-pro > .lm-real-shot.lm-precision-clean {
+ background:#F5F5F7 !important; color:#0A0A0F;
+}
+.lm-page #precision-pro .lm-display-type,
+.lm-page #precision-pro .lm-real-copy h2,
+.lm-page #precision-pro .lm-real-copy h2 span {
+ color:#0A0A0F; -webkit-text-fill-color:#0A0A0F;
+}
+.lm-page #precision-pro .lm-real-copy h2 em,
+.lm-page #precision-pro .lm-real-copy h2 em span {
+ color:#6D28D9 !important; -webkit-text-fill-color:#6D28D9;
+}
+.lm-page #precision-pro .lm-real-copy p,
+.lm-page #precision-pro .lm-precision-caption { color:#52525B; }
+.lm-page #precision-pro .lm-real-copy > .lm-kicker,
+.lm-page #precision-pro .lm-precision-heading > .lm-kicker { color:#52525B; }
+.lm-page #precision-pro .lm-real-copy .lm-link { color:#0A0A0F; border-color:#6B6B6F; }
+.lm-page #precision-pro .lm-real-copy .lm-link:hover { color:#FFFFFF !important; }
+
+/* Precision detail pair: light cards and readable captions. */
+.lm-page #precision-pro .lm-precision-details { background:#F5F5F7; color:#0A0A0F; }
+.lm-page #precision-pro .lm-precision-details figure {
+ background:#F5F5F7; color:#0A0A0F; border:1px solid #D9D9DF;
+}
+.lm-page #precision-pro .lm-precision-details figcaption { color:#3F3F46; }
+.lm-page #precision-pro .lm-precision-details img { mix-blend-mode:normal; }
