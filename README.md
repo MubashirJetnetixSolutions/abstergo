@@ -51,6 +51,10 @@ Official setup references:
 - https://vercel.com/docs/builds/configure-a-build
 - https://nextjs.org/docs/app/getting-started/deploying
 
+## Latest update — 19 October 2026
+
+Includes smooth Loomic wheel scrolling synced with GSAP, smooth chapter navigation, the light sky-blue hero, animated vector logo gradient, dark Abstergo header logo, and the latest transparent product images.
+
 ## Included updates
 
 - Full multi-page Abstergo website, catalog, product routes, cart and request pages.

@@ -1,36 +1,3 @@
-"use client";
+'use client';
 // Resolution-independent portal lighting stays sharp at every scroll scale.
-export default function LoomicPortal() {
-  return (
-    <div className="lh-chrome lh-vector-portal" aria-hidden="true">
-      <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="lh-warm-metal" x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="#FFFFFF" stopOpacity=".08" />
-            <stop offset=".28" stopColor="#FFFFFF" stopOpacity=".5" />
-            <stop offset=".5" stopColor="#6B6B6F" stopOpacity=".65" />
-            <stop offset=".72" stopColor="#FFFFFF" stopOpacity=".06" />
-            <stop offset="1" stopColor="#6B6B6F" stopOpacity=".25" />
-          </linearGradient>
-        </defs>
-        <g fill="none" stroke="url(#lh-warm-metal)">
-          <ellipse cx="600" cy="440" rx="275" ry="220" strokeWidth="1" />
-          <ellipse
-            cx="600"
-            cy="440"
-            rx="250"
-            ry="198"
-            strokeWidth=".6"
-            opacity=".4"
-          />
-          <path
-            d="M 340 390 A 270 210 0 0 1 808 310"
-            strokeWidth="4"
-            strokeLinecap="round"
-            opacity=".3"
-          />
-        </g>
-      </svg>
-    </div>
-  );
-}
+export default function LoomicPortal(){return <div className="lh-chrome lh-vector-portal" aria-hidden="true"><svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="lh-warm-metal" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#E0F7FA" stopOpacity=".08"/><stop offset=".28" stopColor="#E0F7FA" stopOpacity=".5"/><stop offset=".5" stopColor="#00BFFF" stopOpacity=".65"/><stop offset=".72" stopColor="#E0F7FA" stopOpacity=".06"/><stop offset="1" stopColor="#00BFFF" stopOpacity=".25"/></linearGradient></defs><g fill="none" stroke="url(#lh-warm-metal)"><ellipse cx="600" cy="440" rx="275" ry="220" strokeWidth="1"/><ellipse cx="600" cy="440" rx="250" ry="198" strokeWidth=".6" opacity=".4"/><path d="M 340 390 A 270 210 0 0 1 808 310" strokeWidth="4" strokeLinecap="round" opacity=".3"/></g></svg></div>}

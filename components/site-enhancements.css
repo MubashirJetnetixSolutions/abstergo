@@ -10,8 +10,8 @@ header.nav,
 }
 .lm-page > header.lm-nav {
   top: 20px;
-  background: #0a0a0aed;
-  border-color: #ffffff29;
+  background: #ffffffed;
+  border-color: #1E90FF29;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -23,15 +23,11 @@ header.nav,
   z-index: 90;
 }
 .store-shell::before {
-  content: "";
+  content: '';
   display: block;
   height: var(--store-header-height, 86px);
 }
 @media (max-width: 700px) {
-  .lm-page > header.lm-nav {
-    top: 12px;
-  }
-  .store-shell::before {
-    height: var(--store-header-height, 70px);
-  }
+  .lm-page > header.lm-nav { top: 12px; }
+  .store-shell::before { height: var(--store-header-height, 70px); }
 }
