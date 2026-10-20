@@ -569,10 +569,6 @@
 .lm-page .lm-tile > div,.lm-page .lm-tile:last-child > div { background:#F4F4F5; color:#0A0A0A; border-color:#E4E4E6; }
 .lm-page figcaption,.lm-page #voltis .lm-voltis-details figcaption,
 .lm-page #precision-pro .lm-precision-details figcaption { color:inherit; }
-/* Desk editorial always sits on a dark image — keep text white. */
-.lm-page .lm-desk-editorial figcaption,
-.lm-page .lm-desk-editorial figcaption h2,
-.lm-page .lm-desk-editorial figcaption .lm-kicker { color:#FFFFFF !important; }
 .lm-page .lm-ultra-gallery figcaption,.lm-page .lm-voltis-details figcaption { color:#2E2E30; border-color:#E4E4E6; }
 .lm-page .lm-ultra-pair-story,.lm-page .lm-hand-editorial { background:#F4F4F5; color:#0A0A0A; }
 .lm-page .lm-ultra-pair-story h2 em,.lm-page .lm-ultra-pair-story .lm-kicker,
@@ -618,30 +614,41 @@
 .lm-page #recliner .lm-link:hover > svg { background:#0A0A0A; color:#FFFFFF; }
 
 /* Approved supporting grays, with dark text on gray surfaces. */
-.lm-page { --lm-light:#B8BDC0; --lm-silver:#B9BFBE; --lm-gray-cool:#B8BDC0; --lm-gray-soft:#B9BFBE; }
+.lm-page { --lm-light:#F5F5F5; --lm-silver:#F5F5F5; --lm-gray-cool:#F5F5F5; --lm-gray-soft:#F5F5F5; }
 .lm-page .lm-ultra-gallery figure > div,.lm-page .lm-audio-detail-grid figure,
 .lm-page .lm-speaker-details figure,.lm-page .lm-charger-angles figure,
 .lm-page .lm-cable-pair article,.lm-page .lm-tile > div,
-.lm-page .lm-tile:last-child > div { background:linear-gradient(135deg,#B8BDC0 0%,#B9BFBE 100%); color:#0A0A0A; border-color:#B9BFBE; }
+.lm-page .lm-tile:last-child > div { background:#F5F5F5; color:#0A0A0A; border-color:#F5F5F5; }
 .lm-page .lm-ultra-gallery figure:nth-child(even) > div,
 .lm-page .lm-audio-detail-grid figure:nth-child(even),
 .lm-page .lm-speaker-details figure:nth-child(even),
 .lm-page .lm-charger-angles figure:nth-child(even),
 .lm-page .lm-u45-gallery figure,.lm-page .lm-u45-gallery figure:nth-child(-n+2),
 .lm-page .lm-charger-colorways article,.lm-page .lm-speaker-kit-views img {
- background:linear-gradient(35deg,#B9BFBE 0%,#B8BDC0 100%); color:#0A0A0A; border-color:#B8BDC0;
+ background:#F5F5F5; color:#0A0A0A; border-color:#F5F5F5;
 }
 .lm-page #precision-pro .lm-precision-details { background:#FFFFFF; }
-.lm-page #precision-pro .lm-precision-details figure { background:linear-gradient(135deg,#B8BDC0 0%,#B9BFBE 100%); color:#0A0A0A; border-color:#B9BFBE; }
-.lm-page #precision-pro .lm-precision-details figure:nth-child(even) { background:linear-gradient(35deg,#B9BFBE 0%,#B8BDC0 100%); }
+.lm-page #precision-pro .lm-precision-details figure { background:#F5F5F5; color:#0A0A0A; border-color:#F5F5F5; }
+.lm-page #precision-pro .lm-precision-details figure:nth-child(even) { background:#F5F5F5; }
 .lm-page #precision-pro .lm-precision-details figcaption { color:#2E2E30; }
-.lm-page .lm-ultra-pair-story,.lm-page .lm-hand-editorial { background:linear-gradient(35deg,#B9BFBE 0%,#B8BDC0 100%); color:#0A0A0A; }
+.lm-page .lm-ultra-pair-story,.lm-page .lm-hand-editorial { background:#F5F5F5; color:#0A0A0A; }
 .lm-page .lm-ultra-pair-story .lm-kicker,.lm-page .lm-ultra-pair-story h2 em { color:#2E2E30; }
-.lm-page .lm-ultra-bestseller { background:linear-gradient(135deg,#B8BDC0 0%,#B9BFBE 100%); border-color:#B9BFBE; color:#0A0A0A; }
-.lm-page .lm-ultra-gallery figcaption,.lm-page .lm-voltis-details figcaption { border-color:#B8BDC0; }
-.lm-page .lm-precision-rule { background:linear-gradient(35deg,#B9BFBE 0%,#B8BDC0 100%); }
-.lm-page .lh-aurora { background:radial-gradient(ellipse at 74% 25%,#B8BDC033,transparent 55%); }
-.lm-page .lh-logo-beat::before { background:radial-gradient(ellipse,#B9BFBE26,transparent 65%); }
+.lm-page .lm-ultra-bestseller { background:#F5F5F5; border-color:#F5F5F5; color:#0A0A0A; }
+.lm-page .lm-ultra-gallery figcaption,.lm-page .lm-voltis-details figcaption { border-color:#F5F5F5; }
+.lm-page .lm-precision-rule { background:#F5F5F5; }
+.lm-page .lh-aurora { background:radial-gradient(ellipse at 74% 25%,#F5F5F533,transparent 55%); }
+.lm-page .lh-logo-beat::before { background:radial-gradient(ellipse,#F5F5F526,transparent 65%); }
 .lm-page .lm-kinetic-band i,.lm-page .lm-footer .lm-kicker,
-.lm-page #recliner .lm-kicker,.lm-page #recliner .lm-real-copy p { color:#B8BDC0; }
-.lm-page #recliner .lm-real-copy h2 em,.lm-page #recliner .lm-recliner-wide h3 em { color:#B9BFBE !important; }
+.lm-page #recliner .lm-kicker,.lm-page #recliner .lm-real-copy p { color:#F5F5F5; }
+.lm-page #recliner .lm-real-copy h2 em,.lm-page #recliner .lm-recliner-wide h3 em { color:#F5F5F5 !important; }
+
+/* White desk-editorial copy over the dark product photograph. */
+.lm-page .lm-desk-editorial figcaption h2,
+.lm-page .lm-desk-editorial figcaption h2 span,
+.lm-page .lm-desk-editorial figcaption .lm-link {
+ color:#FFFFFF; -webkit-text-fill-color:#FFFFFF;
+}
+.lm-page .lm-desk-editorial figcaption .lm-link { border-color:#FFFFFF88; }
+.lm-page .lm-desk-editorial figcaption .lm-link::before { background:#2E2E30; }
+.lm-page .lm-desk-editorial figcaption .lm-link > svg { background:#FFFFFF; color:#0A0A0A; }
+.lm-page .lm-desk-editorial figcaption .lm-link:hover { color:#FFFFFF !important; border-color:#FFFFFF; }

@@ -101,3 +101,7 @@ This package was checked locally; it has not been deployed into your Vercel acco
 White primary, dark secondary, with #B8BDC0 / #B9BFBE gradients on supporting gray panels. Both reclining comfort scenes remain dark. Includes the solid light sticky header, black header logo, readable text colors, smooth scrolling, product animations and opening sound controls.
 
 Extract BOTH ZIPs into the SAME location so the Abstergo-Loomic folders merge. Run commands in that merged folder. On Vercel choose Next.js, Node 22.x, npm ci --include=dev, npm run build; leave Output Directory at default.
+
+
+## Latest version: 20 October 2026
+White primary, dark secondary, supporting gray #F5F5F5. Includes the dark reclining comfort scenes and white desk-editorial headings/link. Extract both ZIP parts into the same location, merging the Abstergo-Loomic folder.
