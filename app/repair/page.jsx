@@ -1,3 +1,3 @@
-import Commerce from '../../components/Commerce';
-export const metadata={title:'Repair — Abstergo Technology'};
-export default function Page(){return <Commerce view="repair"/>}
+import {RepairPage} from '../../components/brand/InformationPages';
+export const metadata={title:'Diagnosis, repair & maintenance — Abstergo'};
+export default function Page(){return <RepairPage/>}

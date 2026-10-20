@@ -9,10 +9,10 @@ const products=[
 ['VOLTIS POWER ULTRA','Our best seller. Your daily power.','voltis-ultra-cable-cutout-v2.webp','mobile-power',-3,-29,-14,15],
 ['VOLTIS POWER PRO','Ready for anywhere.','voltis-pro-duo-cutout-v3.webp','voltis',24,-24,-7,20],
 ['140W DISPLAY','Power, in focus.','charger-140-2.webp','charging',33,4,5,28],
-['COMFORT','Your better everyday.','chair-quarter-cutout.webp','comfort',-32,2,5,26],
-['PRECISION PRO','Find your flow.','precision-pro-3.webp','precision-pro',-20,27,-12,28],
-['PULSE M','Make space for sound.','pulse-m-3.webp','pulse-m',-28,-27,12,18],
-['THE CONNECTION','Stay connected.','cable-black-coil.webp','power',22,34,-9,18]
+['COMFORT','Performance starts with comfort.','chair-quarter-cutout.webp','comfort',-32,2,5,26],
+['PRECISION PRO','Built around your performance.','precision-pro-3.webp','precision-pro',-20,27,-12,28],
+['PULSE M','Hear what matters.','pulse-m-3.webp','pulse-m',-28,-27,12,18],
+['THE CONNECTION','Power without interruption.','cable-black-coil.webp','power',22,34,-9,18]
 ];
 const clamp=v=>Math.min(1,Math.max(0,v));const mix=(a,b,t)=>a+(b-a)*t;const ease=v=>{v=clamp(v);return v*v*(3-2*v)};
 export default function LoomicHero(){const sectionRef=useRef(null),stageRef=useRef(null);useEffect(()=>{
@@ -72,10 +72,10 @@ export default function LoomicHero(){const sectionRef=useRef(null),stageRef=useR
  <video className="lh-film" src="/loomic/essentials-scroll.mp4" muted playsInline preload="auto" aria-hidden="true"/><div className="lh-aurora"/><div className="lh-grid"/><LoomicPortal stageRef={stageRef}/><div className="lh-orbit-path"/>
  <div className="lh-topline"><span><i/> AN EVERYDAY BEYOND ORDINARY</span><span className="lh-phase-current">01 / ARRIVE</span></div>
  <div className="lh-logo"><div className="lh-logo-beat"><LoomicLogo/></div></div>
- <div className="lh-opening"><div className="lh-headline"><h1>Everyday. <em>Reimagined.</em></h1></div><div className="lh-invitation"><p>Considered essentials.<br/>Extraordinary possibilities.</p><button onClick={enter}>Enter our world <ArrowUpRight size={18}/></button></div></div>
+ <div className="lh-opening"><div className="lh-headline"><h1>Infinite <em>Innovation.</em></h1></div><div className="lh-invitation"><p>Essentials engineered<br/>for modern performance.</p><button onClick={enter}>Enter our world <ArrowUpRight size={18}/></button></div></div>
  <div className="lh-chapter-title"><span>SEVEN ESSENTIALS. ONE NEW PERSPECTIVE.</span><h2>A world<br className="lh-desktop-break"/><em> around you.</em></h2></div>
  <svg className="lh-constellation" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="lh-signal"><stop stopColor="#6B6B6F" stopOpacity=".1"/><stop offset="1" stopColor="#6B6B6F" stopOpacity=".55"/></linearGradient></defs>{products.map((_,i)=><path key={i} className="lh-connection" pathLength="1" d="M50 49L50 49"/>)}</svg><div className="lh-products">{products.map(([name,line,image,href],i)=><Link href={'#'+href} className={'lh-product lh-product-'+i} key={name} aria-label={'Explore '+name}><div className="lh-product-float"><img src={'/loomic/'+image} alt={name} decoding="async"/><span className="lh-hover-label">{name} <ArrowUpRight size={12}/></span></div><div className="lh-product-info"><small>0{i+1} / {name}</small><span>{line}</span></div></Link>)}</div>
  <div className="lh-finale"><span>THE WORLD OF LOOMIC</span><h2>Find your <em>essential.</em></h2><a href="#precision-pro">Explore the collection <ArrowDown size={15}/></a></div>
- <div className="lh-bottom"><span>POWER / SOUND / SPACE / POSSIBILITY</span><div className="lh-scroll-cue"><div className="lh-scroll-pill"><i/></div><span>SCROLL TO DISCOVER</span></div><span className="lh-coordinate">DESIGNED AROUND YOU <i>↗</i></span></div><div className="lh-phase-steps" aria-hidden="true"><span className="lh-phase-step is-active">01 <b>ARRIVE</b></span><i/><span className="lh-phase-step">02 <b>CONNECT</b></span><i/><span className="lh-phase-step">03 <b>DISCOVER</b></span></div><div className="lh-progress"><i/></div>
+ <div className="lh-bottom"><span>POWER / SOUND / PRECISION / COMFORT / MOBILITY</span><div className="lh-scroll-cue"><div className="lh-scroll-pill"><i/></div><span>SCROLL TO DISCOVER</span></div><span className="lh-coordinate">DESIGNED AROUND YOU <i>↗</i></span></div><div className="lh-phase-steps" aria-hidden="true"><span className="lh-phase-step is-active">01 <b>ARRIVE</b></span><i/><span className="lh-phase-step">02 <b>CONNECT</b></span><i/><span className="lh-phase-step">03 <b>DISCOVER</b></span></div><div className="lh-progress"><i/></div>
  </div></section>
 }

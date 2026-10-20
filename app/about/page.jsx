@@ -1,3 +1,3 @@
-import Commerce from '../../components/Commerce';
-export const metadata={title:'About — Abstergo Technology'};
-export default function Page(){return <Commerce view="about"/>}
+import {AboutPage} from '../../components/brand/InformationPages';
+export const metadata={title:'About Abstergo — Technology, chosen intelligently.'};
+export default function Page(){return <AboutPage/>}

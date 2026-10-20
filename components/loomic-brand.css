@@ -652,3 +652,6 @@
 .lm-page .lm-desk-editorial figcaption .lm-link::before { background:#2E2E30; }
 .lm-page .lm-desk-editorial figcaption .lm-link > svg { background:#FFFFFF; color:#0A0A0A; }
 .lm-page .lm-desk-editorial figcaption .lm-link:hover { color:#FFFFFF !important; border-color:#FFFFFF; }
+
+/* Client philosophy copy fits the existing animated interludes. */
+.lm-page .lm-philosophy-copy { max-width:680px; margin:28px 0 0; font-size:clamp(14px,1.35vw,18px); line-height:1.8; color:#52525B; }
