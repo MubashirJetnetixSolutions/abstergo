@@ -1,0 +1,21 @@
+.section{box-sizing:border-box;position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:6%;align-items:center;padding:100px 7%;border-bottom:1px solid #ececec;background:#fafafa;color:#151515;font-family:Arial,Helvetica,sans-serif}
+.section .grid{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#11111105 1px,transparent 1px),linear-gradient(90deg,#11111105 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(90deg,#000,transparent 65%)}
+.section .statement{min-width:0;padding:20px 0}
+.section .eyebrow{display:block;font-size:10px;font-weight:600;letter-spacing:1.6px;line-height:1.7;color:#151515}
+.section .title{display:flex;flex-direction:column;align-items:flex-start;gap:0;font-size:clamp(30px,4.25vw,65px);line-height:1.12;letter-spacing:-.045em;font-weight:750;margin:25px 0 0;color:#151515}
+.section .title :global(.color-sweep-word){position:relative;display:block;white-space:nowrap;padding-right:.035em}
+.section .title :global(.color-overlay){position:absolute;inset:0;color:#e95118;clip-path:inset(0 var(--color-reveal,100%) 0 0);pointer-events:none}
+.section .rule{display:block;width:85px;height:3px;margin-top:34px;background:#e95118}
+.section .card{box-sizing:border-box;min-width:0;position:relative;overflow:hidden;padding:clamp(28px,3.5vw,54px);border-radius:22px;background:#151515;color:#fff;box-shadow:0 20px 50px #0000000b}
+.section .label{display:flex;align-items:center;gap:8px;font-size:8px;line-height:1.6;letter-spacing:1.2px;color:#bbb;margin-bottom:34px}
+.section .label i{width:5px;height:5px;flex:none;border-radius:50%;background:#e95118;box-shadow:0 0 14px #e9511855}
+.section .label>span{margin-left:auto;color:#999;white-space:nowrap}
+.section .card h3{color:#fff;font-size:clamp(27px,3vw,44px);font-weight:500;line-height:1.15;letter-spacing:-.035em;margin:0 0 20px}
+.section .card p{color:#c1c1c1;font-size:15px;line-height:1.8;margin:0}
+.section .steps{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 0;padding:22px 0 0;border-top:1px solid #ffffff22}
+.section .steps>span{display:flex;align-items:center;gap:6px;font-size:10px;color:#eee;line-height:1.6}
+.section .steps b{color:#e95118;font-size:8px;font-weight:400}
+.section .card .note{font-size:12px;color:#a6a6a6;line-height:1.7;margin-top:24px}
+@media(max-width:800px){.section{grid-template-columns:1fr;gap:32px}.section .statement{max-width:600px}.section .title{font-size:clamp(34px,7vw,62px)}}
+@media(max-width:700px){.section{padding:65px 6%}.section .card{padding:30px 26px}.section .card h3{font-size:30px}.section .label{font-size:7px;letter-spacing:.9px}}
+@media(prefers-reduced-motion:reduce){.section .title :global(.color-overlay){clip-path:none;animation:none!important}}
