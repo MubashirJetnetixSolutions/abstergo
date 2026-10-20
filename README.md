@@ -51,12 +51,6 @@ Official setup references:
 - https://vercel.com/docs/builds/configure-a-build
 - https://nextjs.org/docs/app/getting-started/deploying
 
-## Latest update — 19 October 2026
-
-Purple (#7C3AED) is restored. The opening hero, Precision Pro presentation and detail cards, the marked charger cards, and Productivity/Sound/Power chapters use light backgrounds with readable dark text. Remaining sections retain the dark/graphite theme. The sticky header is solid light with the original black Abstergo logo. Smooth scrolling, logo gradient, sound controls and product animations are included.
-
-Download BOTH Part 1 and Part 2 ZIPs and extract them into the SAME location. Their Abstergo-Loomic folders must merge before installing or deploying. Each ZIP contains a different subset of the full project.
-
 ## Included updates
 
 - Full multi-page Abstergo website, catalog, product routes, cart and request pages.
@@ -100,3 +94,10 @@ Existing semantic class names and CSS order are intentional animation hooks. Tai
 - Build artifacts, dependencies, old hosting tooling and TypeScript are excluded from the ZIP.
 
 This package was checked locally; it has not been deployed into your Vercel account. Browser-based visual/audio QA was unavailable here.
+
+
+## Current version — 20 October 2026
+
+White primary, dark secondary, with #B8BDC0 / #B9BFBE gradients on supporting gray panels. Both reclining comfort scenes remain dark. Includes the solid light sticky header, black header logo, readable text colors, smooth scrolling, product animations and opening sound controls.
+
+Extract BOTH ZIPs into the SAME location so the Abstergo-Loomic folders merge. Run commands in that merged folder. On Vercel choose Next.js, Node 22.x, npm ci --include=dev, npm run build; leave Output Directory at default.
