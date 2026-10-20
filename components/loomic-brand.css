@@ -569,6 +569,10 @@
 .lm-page .lm-tile > div,.lm-page .lm-tile:last-child > div { background:#F4F4F5; color:#0A0A0A; border-color:#E4E4E6; }
 .lm-page figcaption,.lm-page #voltis .lm-voltis-details figcaption,
 .lm-page #precision-pro .lm-precision-details figcaption { color:inherit; }
+/* Desk editorial always sits on a dark image — keep text white. */
+.lm-page .lm-desk-editorial figcaption,
+.lm-page .lm-desk-editorial figcaption h2,
+.lm-page .lm-desk-editorial figcaption .lm-kicker { color:#FFFFFF !important; }
 .lm-page .lm-ultra-gallery figcaption,.lm-page .lm-voltis-details figcaption { color:#2E2E30; border-color:#E4E4E6; }
 .lm-page .lm-ultra-pair-story,.lm-page .lm-hand-editorial { background:#F4F4F5; color:#0A0A0A; }
 .lm-page .lm-ultra-pair-story h2 em,.lm-page .lm-ultra-pair-story .lm-kicker,
