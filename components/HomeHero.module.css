@@ -1,0 +1,78 @@
+.stage {
+  isolation: isolate;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.36;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 76%, transparent 100%);
+}
+
+.ribbon {
+  position: absolute;
+  left: -18%;
+  width: 136%;
+  color: #b7b2ae;
+  font-size: clamp(20px, 2.15vw, 38px);
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1;
+  white-space: nowrap;
+  transform-origin: center;
+}
+
+.ribbonTrack {
+  display: flex;
+  width: max-content;
+  animation: ribbon-scroll var(--ribbon-duration, 60s) linear infinite;
+  will-change: transform;
+}
+
+.ribbonTrack span {
+  display: block;
+  min-width: max-content;
+}
+
+.ribbonReverse .ribbonTrack {
+  animation-direction: reverse;
+}
+
+.horizon {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  width: min(72vw, 1050px);
+  height: 22%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgb(233 81 24 / 12%), transparent 68%);
+  filter: blur(24px);
+  transform: translateX(-50%);
+}
+
+@keyframes ribbon-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 700px) {
+  .background {
+    opacity: 0.24;
+  }
+
+  .ribbon {
+    left: -45%;
+    width: 190%;
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbonTrack {
+    animation-play-state: paused;
+  }
+}
