@@ -1,6 +1,7 @@
-Replace these four files in the project root, preserving their folder paths.
-app/page.jsx is included to connect both ABSTERGO headings to the Good Times animation component.
-The original letter-by-letter animation and timing are retained.
-Keep all other project files. Commit and push all four files to the branch connected to Vercel, then redeploy.
-For local development, restart npm run dev.
-This homepage matches the latest approved source from this chat; retain a backup if you have made independent homepage edits.
+VERCEL BUILD FIX
+Replace/merge the included files into your existing project root, keeping folder paths.
+IMPORTANT: lib/products.js and public/products must be committed along with app/page.jsx.
+The previous patch omitted product data required by the latest homepage (IDs 5-9), causing undefined.color during prerendering.
+This package includes the matching homepage data, components and product photos. Good Times and the original letter animation are retained.
+Commit and push ALL included files to the production branch used by Vercel, then deploy that new commit.
+No package changes required. The matching Next.js production source passed npm run build (30 pages).
