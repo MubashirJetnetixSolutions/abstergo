@@ -1,0 +1,6 @@
+.wordmark.wordmark.wordmark{display:flex;align-items:center;justify-content:center;width:100%;gap:0;padding:24px 0;margin:0;min-height:0!important;line-height:1;letter-spacing:0;font-size:0!important;overflow:visible}
+.wordmark .letterWindow.letterWindow.letterWindow{display:block;position:relative;flex:var(--slice-width) 1 0%;min-width:0;width:auto;aspect-ratio:var(--slice-width)/761;margin:0!important;padding:0;overflow:hidden;line-height:1!important}
+.wordmark .glyph.glyph.glyph{display:block;width:100%;height:100%;background:#fff;background-clip:border-box!important;-webkit-background-clip:border-box!important;mask:url('/brand/abstergo-good-times.svg') var(--mask-position)/var(--mask-size) no-repeat;-webkit-mask:url('/brand/abstergo-good-times.svg') var(--mask-position)/var(--mask-size) no-repeat}
+:global(.reference-footer) .wordmark .glyph.glyph.glyph{background:linear-gradient(90deg,#471d1255,transparent 18%,transparent 82%,#471d1255),linear-gradient(180deg,#ff9154 10%,#e95118 60%,#60200d 100%)}
+@media(max-width:700px){.wordmark.wordmark.wordmark{padding:20px 0}}
+@media(prefers-reduced-motion:reduce){.wordmark .glyph.glyph.glyph{animation:none!important;transform:none!important;opacity:1!important}}
