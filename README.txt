@@ -1,7 +1,4 @@
-VERCEL BUILD FIX
-Replace/merge the included files into your existing project root, keeping folder paths.
-IMPORTANT: lib/products.js and public/products must be committed along with app/page.jsx.
-The previous patch omitted product data required by the latest homepage (IDs 5-9), causing undefined.color during prerendering.
-This package includes the matching homepage data, components and product photos. Good Times and the original letter animation are retained.
-Commit and push ALL included files to the production branch used by Vercel, then deploy that new commit.
-No package changes required. The matching Next.js production source passed npm run build (30 pages).
+Apply after Abstergo-Hero-Ribbons-Replacement.zip.
+Replace app/page.jsx and copy public/products/yoga-book-9i-angle.png, preserving their folder paths.
+This changes the Yoga Book 9i photo in the Power meets your vision section to the alternate angled photo of the same model.
+Commit both files to GitHub and redeploy Vercel. No other files need replacement for this correction.
