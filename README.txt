@@ -1,5 +1,6 @@
-Replace the included files at the same paths in your existing project.
-Keep all other files unchanged.
-This restores the original per-letter animation and timing while retaining the Good Times wordmark.
-Restart the development server, or run npm run build and redeploy on Vercel.
-Production build verified.
+Replace these four files in the project root, preserving their folder paths.
+app/page.jsx is included to connect both ABSTERGO headings to the Good Times animation component.
+The original letter-by-letter animation and timing are retained.
+Keep all other project files. Commit and push all four files to the branch connected to Vercel, then redeploy.
+For local development, restart npm run dev.
+This homepage matches the latest approved source from this chat; retain a backup if you have made independent homepage edits.
