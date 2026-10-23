@@ -1,0 +1,6 @@
+.strip.strip{display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,3vw,48px);padding:34px 4.7%;background:#fff;border-block:1px solid #ededed;overflow-x:auto}
+.strip .label{flex:0 0 140px;font-size:9px;line-height:1.6;letter-spacing:1px;color:#777}
+.strip .loomic{display:flex;align-items:center;justify-content:center;flex:0 0 114px;opacity:.7}
+.strip .loomic img{display:block!important;width:114px!important;height:21px!important;object-fit:contain;visibility:visible!important;opacity:1!important;filter:brightness(0)}
+.strip strong{flex:none;color:#7a7a7a;font-size:24px}
+@media(max-width:700px){.strip.strip{padding:24px 6%;gap:32px;justify-content:flex-start}.strip .label{flex-basis:115px}.strip strong{font-size:21px}}

@@ -258,5 +258,7 @@
 .service-type-band .letter-reveal-title{gap:.025em;letter-spacing:0;font-size:clamp(44px,14vw,230px)}
 .service-type-band .letter-window{padding:.12em 0;margin-right:0}
 
-/* Loomic logo in the leading-brands strip. */
-.brand-strip .brand-strip-loomic{display:inline-flex;align-items:center;flex:0 0 auto;opacity:.9;transition:opacity .3s,transform .3s}.brand-strip .brand-strip-loomic:hover{opacity:1;transform:translateY(-2px)}.brand-strip .brand-strip-loomic img{display:block;width:118px;height:auto;max-width:none}@media(max-width:700px){.brand-strip .brand-strip-loomic img{width:96px}}
+/* Client-selected products, with the approved audience scenes preserved. */
+.brand-strip .brand-strip-loomic{display:flex;align-items:center;justify-content:center;flex:none;width:110px;padding:8px 0}.brand-strip .brand-strip-loomic img{display:block;width:100%;height:auto;opacity:.75}
+.showcase-business .showcase-spec{flex-wrap:wrap;line-height:1.6;gap:8px 20px}.showcase-business .showcase-spec>span:last-child{max-width:260px}
+@media(max-width:700px){.brand-strip .brand-strip-loomic{width:86px}.showcase-business .showcase-spec{font-size:8px}}

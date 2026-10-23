@@ -1,43 +1,22 @@
-# Abstergo Technology — client review source
+# Abstergo Technology — Complete Next.js source
 
-Complete Next.js + Tailwind CSS project in JavaScript/JSX (no TypeScript). Includes the latest published home page, Loomic and all other current routes.
+Includes the complete homepage, Loomic and other routes, all 135 public assets, six animated hero text ribbons, Good Times wordmark animation, tablet centering adjustments and Loomic in the brands bar.
 
 ## Run locally
-Use Node.js 22.x. Open a terminal in this folder, then run:
 
-```bash
-npm ci --include=dev
+Use Node.js 22 or newer.
+
+```sh
+npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. For a production build, run `npm run build` then `npm start`. Restart the dev server after replacing the project.
+## Deploy on Vercel
 
-## Vercel
-Import this project with the Next.js framework preset. Set the root directory to the folder containing package.json, Node.js to 22.x, install command to `npm ci --include=dev`, and build command to `npm run build`. Leave Output Directory at the Next.js default. Clear any old Vite/Vinext/dist command overrides. No environment variables are required for this frontend.
+Replace the old project with the contents of this folder, including `public`, `package.json` and `package-lock.json`. Keep any private environment settings in Vercel. Do not combine this project with the older partial patches.
 
-## Latest home-page review changes
-- Client hero, positioning message, six consultation paths and five audience messages.
-- Selected for performance, including Dell Precision 7680 and expandable recommendation.
-- Refined workstation presentation with transparent product image.
-- Readable text on dark showcase panels.
-- Abstergo × Loomic logo composition.
-- Smooth looping Loomic product slider with fades at both ends and pause control.
-- Increased letter spacing in the animated ABSTERGO heading.
+Commit all source and public files to GitHub. In Vercel choose the Next.js framework preset, use the folder containing package.json as Root Directory, and keep Output Directory at its default (do not set it to out or dist). Use npm ci to install and npm run build to build. Deploy the new commit.
 
-The approved Loomic design, product photography, smooth scroll, preloader and sound controls remain included. Loomic uses white, dark and supporting #F5F5F5.
+If the old project had Vite/Cloudflare settings, remove their custom Vercel build/output overrides before deploying this Next.js project.
 
-## Source map
-- app/page.jsx: current home page and its animation setup.
-- app/globals.css: home and shared styles.
-- components/LoomicProductSlider.jsx: looping product ribbon.
-- components/LoomicExperience.jsx and components/Loomic*.jsx: Loomic page.
-- components/brand/: About, Business, Solutions, Contact, Support, Insights and Ultra page components.
-- components/Commerce.jsx: catalog, products and cart views.
-- lib/content/website.js: shared document-derived content.
-- lib/products.js: laptop data.
-- public/: local images, logos and video.
-
-## Limits
-Forms prepare inquiry details locally; email, payments and order processing need a backend connection. Some original laptop photos use manufacturer URLs and require internet access. Automatic opening sound may wait for the first user interaction.
-
-Production build verified. This ZIP has not been deployed to your Vercel account. Browser visual QA was unavailable due to the preview server conflict.
+All image references now resolve to files included under public; no product-image hotlinks are required. The production build passed with all 30 routes. This package contains JavaScript/JSX, CSS and Tailwind setup; no TypeScript source.
