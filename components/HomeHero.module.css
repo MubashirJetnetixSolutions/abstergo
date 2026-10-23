@@ -1,23 +1,8 @@
 .stage.stage{background:#fafafa;isolation:isolate}
-.background{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% 80%,#e9511810,transparent 48%),linear-gradient(180deg,#fff 0%,#fafafa 62%,#f0f1f2 100%)}
-.background::before{content:'';position:absolute;inset:0;background-image:linear-gradient(#15151503 1px,transparent 1px),linear-gradient(90deg,#15151503 1px,transparent 1px);background-size:100px 100px;mask-image:linear-gradient(transparent 25%,#000 100%)}
-.orbit,.orbitInner{position:absolute;left:50%;top:47%;width:120%;height:105%;border:1px solid #19191909;border-radius:50%;transform:translate(-50%,-15%) rotate(-12deg);box-shadow:0 -12px 45px #ffffffc9;animation:orbitBreath 16s ease-in-out infinite alternate}
-.orbitInner{width:95%;height:85%;top:55%;border-color:#e951180c;animation-delay:-8s}
-.horizon{position:absolute;left:12%;right:12%;bottom:8%;height:1px;background:linear-gradient(90deg,transparent,#16161612,transparent)}
-@keyframes orbitBreath{to{transform:translate(-50%,-18%) rotate(-7deg) scale(1.04)}}
-@media(prefers-reduced-motion:reduce){.orbit,.orbitInner{animation:none}}
-
-/* Soft, continuous type ribbons behind the existing hero choreography. */
-.ribbon{position:absolute;left:-8%;top:28%;width:116%;transform:rotate(-9deg);overflow:hidden;border-block:1px solid #17171707;background:#ffffff45;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.ribbonTrack{display:flex;width:max-content;animation:ribbonTravel var(--ribbon-duration,48s) linear infinite;will-change:transform}
-.ribbonTrack>span{flex:none;white-space:nowrap;font-size:clamp(62px,8vw,130px);font-weight:800;line-height:1.25;letter-spacing:-.04em;color:#17171710}
-.ribbonLower{top:76%;transform:rotate(8deg)}
-.ribbonLower .ribbonTrack{animation-direction:reverse;animation-duration:58s}
-.ribbonLower .ribbonTrack>span{color:#e951180b}
+.background{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% 80%,#e9511809,transparent 50%),linear-gradient(180deg,#fff 0%,#fafafa 62%,#f0f1f2 100%)}
+.horizon{position:absolute;left:12%;right:12%;bottom:8%;height:1px;background:linear-gradient(90deg,transparent,#1616160c,transparent)}
 .stage :global(.cinema-laptop){left:50%;right:auto;transform:translateX(-50%);transform-origin:center}
-@keyframes ribbonTravel{to{transform:translate3d(-50%,0,0)}}
 @media(min-width:700px) and (max-width:1100px){.stage :global(.cinema-laptop){width:86%;max-width:900px;height:52%;top:45%}.stage :global(.laptop-open){transform-origin:50% 50%}}
-@media(prefers-reduced-motion:reduce){.ribbonTrack{animation:none}}
 
-.ribbonReverse .ribbonTrack{animation-direction:reverse}
-.ribbonReverse .ribbonTrack>span{color:#e9511814}
+.visionVisual.visionVisual{mix-blend-mode:multiply;filter:none}
+.visionVisual.visionVisual img{filter:none;object-fit:contain}
