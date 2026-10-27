@@ -1,0 +1,28 @@
+.section{padding:88px 7% 64px;background:#fff;color:#0a0a0a;overflow:hidden}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-bottom:32px;border-bottom:1px solid #e5e5e5}
+.topline>span:last-child,.footnote>span{font-size:9px;letter-spacing:.16em;color:#757575}
+.editorial{display:grid;grid-template-columns:1.1fr 1fr;gap:9%;align-items:center;padding:60px 0}
+.title :global(.lm-display-type){font-size:clamp(56px,7.2vw,114px);line-height:.94;letter-spacing:-.065em;max-width:480px}
+.statement>p{margin:0;font-size:clamp(17px,2vw,27px);line-height:1.45;letter-spacing:-.025em;color:#737373;max-width:450px}
+.statement>p:last-child{font-size:clamp(14px,1.45vw,19px);line-height:1.65;letter-spacing:-.01em}
+.statement strong,.footnote strong{font-weight:500;color:#0a0a0a}
+.rule{display:block;width:44px;height:2px;background:#0a0a0a;margin:26px 0}
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #dedede;border-bottom:1px solid #dedede;background:linear-gradient(110deg,#f5f5f5,#fff)}
+.pillars>div{padding:22px 16px;border-right:1px solid #e5e5e5}.pillars>div:first-child{padding-left:0}.pillars>div:last-child{border-right:0}
+.pillars>div>span{font-size:9px;color:#8a8a8a;font-variant-numeric:tabular-nums}
+.pillars p{font-size:clamp(17px,2.2vw,31px);letter-spacing:-.04em;margin:20px 0 0;font-weight:500}.pillars p span{color:#a9aaae}
+.footnote{display:grid;grid-template-columns:1.1fr 1fr;gap:9%;align-items:start;padding-top:30px}.footnote p{margin:0;max-width:450px;font-size:12px;line-height:1.8;color:#777}
+@media(max-width:700px){.section{padding:55px 6% 44px}.topline{padding-bottom:22px}.topline>span:last-child{font-size:7px;max-width:110px;text-align:right;line-height:1.6}.editorial{grid-template-columns:1fr;gap:32px;padding:35px 0}.title :global(.lm-display-type){font-size:18vw;max-width:100%}.statement>p{font-size:22px}.statement>p:last-child{font-size:16px}.pillars{grid-template-columns:repeat(3,1fr)}.pillars>div{padding:18px 10px!important}.pillars>div:nth-child(3){border-right:0}.pillars>div:nth-child(n+4){border-top:1px solid #e5e5e5}.pillars p{font-size:21px;margin-top:14px}.footnote{grid-template-columns:1fr;gap:14px}.footnote p{font-size:12px}}
+
+/* Spacious, balanced statements instead of a narrow paragraph column. */
+.editorial{display:block;padding:48px 0}
+.title :global(.lm-display-type){max-width:none;font-size:clamp(56px,9vw,140px)}
+.statement{display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:38px;padding:30px 0 0;border-top:1px solid #e5e5e5}
+.statement>p,.statement>p:last-child{max-width:none;font-size:clamp(18px,2.2vw,29px);line-height:1.5;letter-spacing:-.025em;color:#555}
+.statement>p:last-child{border-left:1px solid #e5e5e5;padding-left:14%}
+.statement strong{font-weight:600;color:#0a0a0a}
+:global(#loomic-why).why{padding:72px 7%;overflow:visible}
+:global(#loomic-why) .whyHeading{width:100%;min-width:0}
+:global(#loomic-why) .whyHeading :global(.lm-display-type){display:block;font-size:clamp(36px,7.7vw,118px);line-height:1.08;letter-spacing:-.055em;max-width:100%;margin:0}
+:global(#loomic-why) :global(.lm-philosophy-copy){margin-top:24px;font-size:clamp(15px,1.6vw,21px)}
+@media(max-width:700px){.editorial{padding:32px 0}.title :global(.lm-display-type){font-size:15vw}.statement{grid-template-columns:1fr;gap:22px;margin-top:26px;padding-top:24px}.statement>p,.statement>p:last-child{font-size:20px;line-height:1.5}.statement>p:last-child{border-left:0;padding-left:0}:global(#loomic-why).why{padding:50px 6%}:global(#loomic-why) .whyHeading :global(.lm-display-type){font-size:10.3vw;line-height:1.12}}

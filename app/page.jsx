@@ -13,8 +13,8 @@ import {Search,ShoppingBag,Menu,X,Gamepad2,PenTool,Briefcase,Monitor,Wrench,Chec
 import {products} from '../lib/products';
 import {solutionPaths} from '../lib/content/website';
 const productById=id=>products.find(product=>product.id===id);
-const showcaseStories=[productById(5),{...productById(1),type:'Creator',color:'light'},productById(6),productById(7),productById(8)];
 const visionProduct=productById(9);
+const showcaseStories=[productById(5),{...productById(1),type:'Creator',color:'light'},productById(6),productById(7),productById(8)];
 const openLaptop='/products/rog-g16-front.png';
 function LetterReveal({text,className=''}){if(text==='ABSTERGO')return <AbstergoWordmark className={className}/>;return <div className={'letter-reveal-title '+className} aria-label={text}>{[...text].map((letter,i)=><span className="letter-window" style={{'--letter-index':i}} aria-hidden="true" key={i}><span className="reveal-letter">{letter}</span></span>)}</div>}
 function ColorText({text,className=''}){return <h2 className={'color-sweep-title '+className} aria-label={text}>{text.split(' ').map((word,i)=><span className="color-sweep-word" key={i} aria-hidden="true"><span>{word}</span><span className="color-overlay">{word}</span></span>)}</h2>}
