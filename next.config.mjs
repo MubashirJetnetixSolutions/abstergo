@@ -1,2 +1,2 @@
-const nextConfig = { images: { unoptimized: true }, typescript: { ignoreBuildErrors: true } };
+const nextConfig = { images: { unoptimized: true } };
 export default nextConfig;
