@@ -20,7 +20,7 @@ export default function SitePreloader({assets=['/logo.png','/hero-geometric.png'
    const target=Math.round(finished/total*100);current=Math.min(target,current+Math.max(.35,(target-current)*.08));
    setProgress(Math.floor(current));
    if(finished>=total&&current>=99&&now-started>(reduced?0:850)){
-    setProgress(100);setPhase('leaving');clearTimeout(timer);
+    setProgress(100);surfaces.forEach(el=>el.inert=false);document.documentElement.style.overflow=previousOverflow;document.documentElement.classList.remove('site-is-loading');setPhase('leaving');clearTimeout(timer);
     exitTimer=setTimeout(()=>{if(cancelled)return;surfaces.forEach(el=>el.inert=false);document.documentElement.style.overflow=previousOverflow;document.documentElement.classList.remove('site-is-loading');setPhase('done');ScrollTrigger.refresh()},reduced?0:650);
    }else frame=requestAnimationFrame(tick);
   };

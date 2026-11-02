@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef} from 'react';
-import Link from 'next/link';
+import Link from '../NavigationLink';
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {ArrowUpRight,ArrowDown,MessagesSquare,Building2,LifeBuoy,Phone,MessageCircle,Mail,Clock,MapPin} from 'lucide-react';

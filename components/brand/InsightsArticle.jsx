@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../NavigationLink';
 import {ArrowLeft,ArrowUpRight,Check,ArrowRight} from 'lucide-react';
 import BrandShell from './BrandShell';
 import {guides} from '../../lib/content/insights';

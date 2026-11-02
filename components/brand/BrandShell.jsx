@@ -2,7 +2,7 @@
 import SiteHeader from '../SiteHeader';
 import {useState} from 'react';
 import {usePathname} from 'next/navigation';
-import Link from 'next/link';
+import Link from '../NavigationLink';
 import {ArrowUpRight,Menu,X,ArrowUp} from 'lucide-react';
 import BrandMotion from './BrandMotion';
 import './brand-pages.css';

@@ -1,6 +1,6 @@
 'use client';
 import {useState} from 'react';
-import Link from 'next/link';
+import Link from '../NavigationLink';
 import {Search,ArrowUpRight,ArrowRight,X,BookOpen} from 'lucide-react';
 import BrandShell,{BrandTitle} from './BrandShell';
 import {guides} from '../../lib/content/insights';

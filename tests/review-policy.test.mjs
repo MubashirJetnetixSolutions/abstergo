@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {permissions,canRead,validateReview,checkOrigin} from '../lib/server/review-policy.js';
+const owner={id:'owner-id',email:'owner@example.com'},writer={id:'writer-id',email:'writer@example.com'},other={id:'other-id',email:'other@example.com'};
+const review={author_id:writer.id,status:'pending',deleted_at:null};
+test('only the configured owner can remove or moderate',()=>{for(const user of [null,writer,other]){assert.equal(permissions(user,review,owner.email).canDelete,false);assert.equal(permissions(user,review,owner.email).canModerate,false)}assert.equal(permissions(owner,review,owner.email).canDelete,true);assert.equal(permissions(owner,review,'').canDelete,false)});
+test('only the writer can edit, including when owner views another writer’s review',()=>{assert.equal(permissions(writer,review,owner.email).canEdit,true);for(const user of [null,owner,other])assert.equal(permissions(user,review,owner.email).canEdit,false)});
+test('pending review and media are private to writer and owner',()=>{assert.equal(canRead(writer,review,owner.email),true);assert.equal(canRead(owner,review,owner.email),true);assert.equal(canRead(other,review,owner.email),false);assert.equal(canRead(null,review,owner.email),false)});
+test('published reviews are readable; removed reviews stay hidden even for owner',()=>{assert.equal(canRead(null,{...review,status:'published'},owner.email),true);assert.equal(canRead(owner,{...review,status:'published',deleted_at:'now'},owner.email),false)});
+test('rejects invalid ratings and short reviews',()=>{const valid={name:'Customer',role:'Architect',rating:5,review:'This is my genuine product experience.'};assert.equal(validateReview(valid).rating,5);for(const rating of [0,6,1.5,'bad'])assert.throws(()=>validateReview({...valid,rating}));assert.throws(()=>validateReview({...valid,review:'short'}))});
+test('requires same origin on mutations',()=>{assert.doesNotThrow(()=>checkOrigin(new Request('https://site.example/api/reviews',{headers:{Origin:'https://site.example'}})));assert.throws(()=>checkOrigin(new Request('https://site.example/api/reviews',{headers:{Origin:'https://attacker.example'}})));assert.throws(()=>checkOrigin(new Request('https://site.example/api/reviews')))});

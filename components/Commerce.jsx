@@ -1,7 +1,7 @@
 'use client';
 import SiteHeader from './SiteHeader';
 import {useEffect,useState} from 'react';
-import Link from 'next/link';
+import Link from './NavigationLink';
 import BrandMotion from './brand/BrandMotion';
 import './brand/brand-pages.css';
 import {products} from '../lib/products';

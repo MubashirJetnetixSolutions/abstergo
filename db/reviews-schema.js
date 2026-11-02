@@ -1,0 +1,4 @@
+import {sqliteTable,text,integer,uniqueIndex,index} from 'drizzle-orm/sqlite-core';
+export const productReviews=sqliteTable('product_reviews',{
+ id:text('id').primaryKey(),productSlug:text('product_slug').notNull(),authorId:text('author_id').notNull(),name:text('name').notNull(),role:text('role').notNull(),rating:integer('rating').notNull(),body:text('body').notNull(),status:text('status').notNull(),purchaseVerified:integer('purchase_verified').notNull().default(0),media:text('media').notNull().default('[]'),version:integer('version').notNull().default(1),createdAt:text('created_at').notNull(),updatedAt:text('updated_at').notNull(),deletedAt:text('deleted_at')
+},t=>[uniqueIndex('reviews_product_author').on(t.productSlug,t.authorId),index('reviews_product_status').on(t.productSlug,t.status)]);

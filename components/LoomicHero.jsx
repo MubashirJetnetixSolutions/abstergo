@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef} from 'react';
-import Link from 'next/link';
+import Link from './NavigationLink';
 import {ArrowDown,ArrowUpRight} from 'lucide-react';
 import LoomicLogo from './LoomicLogo';
 import LoomicPortal from './LoomicPortal';

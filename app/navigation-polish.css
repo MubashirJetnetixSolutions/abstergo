@@ -22,3 +22,7 @@
 @media(max-width:1100px){.ab-header nav{gap:10px;font-size:10px}.ab-header>a>img{width:118px}.ab-header-cta{font-size:10px;padding:13px 15px}}
 @media(max-width:760px){.ab-page .ab-header{height:66px;border-radius:17px;padding:10px 14px 10px 20px}.ab-header nav{font-size:14px}.ab-header-cta{min-height:40px;padding:12px;font-size:9px}.ab-header nav a{align-self:flex-start}}
 @media(prefers-reduced-motion:reduce){:is(.nav,.lm-nav,.ab-header,.store-nav,.ab-footer-grid,.store-footer) *{transition:none!important}}
+
+/* Stable tap/click targets while visual children animate. */
+a,button{touch-action:manipulation}
+@media(hover:none){.button:hover,.ab-button:hover,.lm-button:hover{transform:none!important}}

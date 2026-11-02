@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
-import Link from 'next/link';
+import Link from './NavigationLink';
 import {usePathname} from 'next/navigation';
 import {Search,ShoppingBag,Menu,X,ArrowUpRight} from 'lucide-react';
 import styles from './SiteHeader.module.css';

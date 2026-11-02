@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../NavigationLink';
 import {ArrowUpRight,ShieldCheck,Cpu,Wrench,Building2,Headphones,Compass} from 'lucide-react';
 import BrandShell,{BrandHero,BrandTitle,BrandLink} from './BrandShell';
 import InquiryForm from './InquiryForm';
