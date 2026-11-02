@@ -1,0 +1,45 @@
+﻿.ab-page .biz-pillars .ab-path-card{background:#fff}
+.ab-page .biz-challenges{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.ab-page .biz-challenges>a{display:flex;align-items:center;gap:22px;padding:28px 0;border-bottom:1px solid #ffffff24;transition:color .3s,padding-left .3s}
+.ab-page .biz-challenges>a:hover{color:#e95118;padding-left:10px}
+.ab-page .biz-challenges span{font-size:10px;color:#909099}
+.ab-page .biz-challenges h3{font-size:clamp(18px,2vw,27px);font-weight:400;letter-spacing:-.035em;margin:0 0 6px}
+.ab-page .biz-challenges p{margin:0;font-size:13px;line-height:1.6}
+.ab-page .biz-challenges svg{margin-left:auto;flex-shrink:0}
+.ab-page .biz-card>svg:first-child{align-self:flex-start;color:#e95118;margin-top:0}
+.ab-page .biz-card p{font-size:13px;line-height:1.7;color:#626269;margin:0}
+.ab-page .biz-proof{display:grid;grid-template-columns:1.1fr 1fr;gap:8%;align-items:center}
+.ab-page .biz-proof ul{list-style:none;margin:0;padding:0}
+.ab-page .biz-proof li{display:flex;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid #ffffff24;font-size:18px}
+.ab-page .biz-proof li svg{color:#e95118;flex-shrink:0}
+@media(max-width:760px){.ab-page .biz-challenges,.ab-page .biz-proof{grid-template-columns:1fr}.ab-page .biz-proof{gap:30px}}
+.biz-progress{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e95118,#ff8a4c);transform:scaleX(0);transform-origin:left;z-index:200;pointer-events:none}
+.ab-page .biz-dark{position:relative;overflow:hidden}
+.ab-page .biz-dark>*{position:relative;z-index:1}
+.ab-page .biz-dark>.biz-glow{position:absolute;z-index:0;width:520px;height:520px;right:-120px;top:30%;border-radius:50%;background:radial-gradient(circle,#e9511840,transparent 65%);filter:blur(30px);pointer-events:none}
+.ab-page .biz-marquee{overflow:hidden;background:#111112;color:#fff;padding:22px 0;display:flex;flex-direction:column;gap:10px}
+.ab-page .biz-marquee-track{display:flex;gap:42px;white-space:nowrap;width:max-content;font-size:clamp(22px,3vw,40px);letter-spacing:-.04em;margin-left:-5%}
+.ab-page .biz-marquee-track:nth-child(2){color:transparent;-webkit-text-stroke:1px #ffffff66}
+.ab-page .biz-marquee-track span{display:inline-flex;align-items:center;gap:42px}
+.ab-page .biz-marquee-track i{width:9px;height:9px;border-radius:50%;background:#e95118;display:block}
+.ab-page .biz-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:70px 7%;border-bottom:1px solid #e4e4e6}
+.ab-page .biz-stat strong{display:block;font-size:clamp(48px,6vw,92px);font-weight:400;letter-spacing:-.07em;line-height:1;background:linear-gradient(120deg,#111 40%,#e95118);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ab-page .biz-stat>span{display:block;margin-top:14px;font-size:12px;color:#626269;max-width:200px;line-height:1.6}
+.ab-page .biz-card,.ab-page .biz-pillars .ab-path-card{overflow:hidden;--mx:50%;--my:50%}
+.ab-page .biz-card:before,.ab-page .biz-pillars .ab-path-card:before{content:'';position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx) var(--my),#e951181f,transparent 70%);opacity:0;transition:opacity .35s;pointer-events:none}
+.ab-page .biz-card:hover:before,.ab-page .biz-pillars .ab-path-card:hover:before{opacity:1}
+.ab-page .biz-card,.ab-page .biz-pillars .ab-path-card{transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
+.ab-page .biz-card:hover,.ab-page .biz-pillars .ab-path-card:hover{transform:translateY(-8px);box-shadow:0 22px 50px #0000001a}
+.ab-page .biz-card>svg:last-child{transition:transform .4s}
+.ab-page .biz-card:hover>svg:last-child{transform:rotate(45deg) scale(1.15)}
+.ab-page .biz-challenges>a{position:relative}
+.ab-page .biz-challenges>a:after{content:'';position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:#e95118;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.ab-page .biz-challenges>a:hover:after{transform:scaleX(1)}
+.ab-page .biz-challenges>a:hover svg{transform:rotate(45deg)}
+.ab-page .biz-challenges svg{transition:transform .35s}
+.ab-page .biz-proof li{transition:padding-left .3s,color .3s}
+.ab-page .biz-proof li:hover{padding-left:12px;color:#ff8a4c}
+@media(max-width:760px){.ab-page .biz-stats{grid-template-columns:1fr 1fr;padding:50px 6%}.ab-page .biz-dark>.biz-glow{width:300px;height:300px}}
+
+.ab-page .ab-word-mask{margin-right:0.28em}
+

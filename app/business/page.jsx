@@ -1,3 +1,3 @@
-import {BusinessPage} from '../../components/brand/InformationPages';
-export const metadata={title:'Business technology — Abstergo'};
-export default function Page(){return <BusinessPage/>}
+import BusinessExperience from '../../components/brand/BusinessExperience';
+export const metadata={title:'Business Technology Solutions — Abstergo',description:'Technology built around your business. Choose, deploy and maintain employee devices, workstations, infrastructure and everyday essentials with Abstergo.'};
+export default function Page(){return <BusinessExperience/>}

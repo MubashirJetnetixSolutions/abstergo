@@ -1,3 +1,3 @@
-import {InsightsPage} from '../../components/brand/InformationPages';
-export const metadata={title:'Abstergo Insights — Technology advice'};
-export default function Page(){return <InsightsPage/>}
+import InsightsExperience from '../../components/brand/InsightsExperience';
+export const metadata={title:'Abstergo Insights — Choose with understanding',description:'Practical technology advice for architects, creators and businesses. Explore laptop, graphics, memory, storage and server decisions with Abstergo.'};
+export default function Page(){return <InsightsExperience/>}
