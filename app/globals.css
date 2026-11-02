@@ -262,3 +262,6 @@
 .brand-strip .brand-strip-loomic{display:flex;align-items:center;justify-content:center;flex:none;width:110px;padding:8px 0}.brand-strip .brand-strip-loomic img{display:block;width:100%;height:auto;opacity:.75}
 .showcase-business .showcase-spec{flex-wrap:wrap;line-height:1.6;gap:8px 20px}.showcase-business .showcase-spec>span:last-child{max-width:260px}
 @media(max-width:700px){.brand-strip .brand-strip-loomic{width:86px}.showcase-business .showcase-spec{font-size:8px}}
+
+/* Keep recommendation links readable instead of squeezing into a narrow column. */
+.store-card-bottom{flex-wrap:wrap;gap:14px}.store-card-bottom>a{flex:0 0 auto;max-width:100%;min-width:150px;justify-content:space-between}.store-card-bottom>a>span{max-width:none!important;white-space:normal;line-height:1.5}.store-card-bottom>a>svg{flex-shrink:0}

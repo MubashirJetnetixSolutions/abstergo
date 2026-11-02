@@ -24,4 +24,6 @@ Do not upload node_modules or .next. If replacing an older local copy, remove it
 Consultation and support forms prepare downloadable JSON requests; they do not send email or feed a CRM until a real delivery integration is configured. Contact details remain unconfirmed. Product availability and pricing are consultation based. Opening sound is subject to browser autoplay restrictions.
 
 ## Validation
-Production Next.js build checked on 29 October 2026. All 30 generated routes compiled. Assets are included under public. No universal zero-error guarantee can be made for hosting configuration or third-party changes.
+Production Next.js build checked on 2 November 2026. All 30 generated routes compiled. Assets are included under public. No universal zero-error guarantee can be made for hosting configuration or third-party changes.
+
+Latest source commit: 064d9005b5fec2f75668f46ae4bef36fa6a266e6. Includes the revised Voltis Power Ultra page, section navigation, review placeholder and recommendation-link spacing fix.
