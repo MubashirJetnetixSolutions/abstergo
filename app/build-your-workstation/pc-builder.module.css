@@ -1,0 +1,187 @@
+.heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+.heading h3 { font-size: clamp(25px, 4vw, 45px); font-weight: 730; line-height: 1; letter-spacing: -.055em; margin: 0 0 8px; }
+.heading p, .foot p { color: #544c49; font-size: 13px; margin: 0; line-height: 1.5; }
+.count { flex: none; color: #8e3a22; border: 1px solid #ecc2af; padding: 6px 9px; border-radius: 5px; font-size: 12px; }
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(108px, .65fr) minmax(0, 2.1fr) minmax(108px, .65fr);
+  align-items: center;
+  gap: clamp(5px, 2.2vw, 31px);
+  background:
+    radial-gradient(circle at 50% 42%, #fff 0%, #ffffff00 55%),
+    radial-gradient(ellipse at 88% 18%, #fff0e5, transparent 50%),
+    radial-gradient(ellipse at 10% 85%, #f6d6c6, transparent 52%),
+    radial-gradient(circle, #ad917833 1px, transparent 1px) 0 0 / 17px 17px,
+    var(--paper);
+  border: 1px solid #e1dbd4;
+  border-radius: 16px;
+  padding: clamp(10px, 2.4vw, 32px);
+}
+.parts { display: grid; gap: 12px; min-width: 0; }
+.parts[data-side='left'] { grid-area: 1 / 1; }
+.parts[data-side='right'] { grid-area: 1 / 3; }
+.partButton {
+  display: grid;
+  justify-items: center;
+  min-width: 0;
+  gap: 4px;
+  padding: 8px 4px 10px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: grab;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 680;
+  position: relative;
+}
+.partButton::after {
+  content: '';
+  position: absolute;
+  top: 49%;
+  width: clamp(5px, 2.2vw, 31px);
+  height: 1px;
+  background: var(--part-edge);
+  pointer-events: none;
+}
+.parts[data-side='left'] .partButton::after { left: 100%; }
+.parts[data-side='right'] .partButton::after { right: 100%; }
+.partButton:is(:hover,[aria-pressed='true']) { background: #fff0e8; }
+.partButton > svg { color: var(--part-ink); position: absolute; right: 8px; top: 8px; }
+.workspace { --part-edge: #c96b4c; --part-ink: #863a24; --part-wash: #fbe6dc; }
+.partCard {
+  min-width: 0;
+  padding: clamp(6px, .85vw, 12px);
+  background: #fffdfb;
+  border: 1px solid #d9d0c8;
+  border-radius: 11px;
+  box-shadow: 0 5px 15px #3c21130d;
+}
+.partCard:has(.partButton[aria-pressed='true']) {
+  border-color: #df744f;
+  box-shadow: 0 0 0 1px #f3947457, 0 5px 15px #3c21130d;
+}
+.partButton { width: 100%; }
+.thumbnail { width: 100%; height: clamp(53px, 8vw, 108px); display: grid; place-items: center; border-radius: 5px; background: radial-gradient(ellipse, #fff0 4%, var(--part-wash) 85%); }
+.partArt { display: block; width: 91%; height: 91%; min-width: 0; min-height: 0; object-fit: contain; filter: brightness(1.13) contrast(1.03) drop-shadow(0 4px 5px #3d2c3a55); pointer-events: none; }
+.thumbnail .partArt[data-kind='ram'] { transform: rotate(58deg); width: 62%; height: 78%; }
+.stage {
+  grid-area: 1 / 2;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 3% 0 6%;
+  position: relative;
+  isolation: isolate;
+}
+.stage::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 105%;
+  height: 24%;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #79625748, #9a827514 54%, transparent 73%);
+  transform: rotate(-5deg);
+}
+.case {
+  position: relative;
+  width: min(100%, 650px);
+  aspect-ratio: 1;
+}
+.chassis {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(7px 13px 10px #49374840);
+}
+.side {
+  position: absolute;
+  inset: 16% 30% 23% 12%;
+}
+.stage[data-over='true'] .chassis { filter: drop-shadow(0 0 12px #ed6c47a0); }
+.socket {
+  position: absolute;
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+  padding: 0;
+  border: 1px dashed var(--part-edge);
+  border-radius: 5px;
+  color: var(--part-ink);
+  background: #fffdf2bc;
+  cursor: pointer;
+}
+.socket[data-slot='cpu'] { inset: 13% auto auto 20%; width: 30%; height: 26%; }
+.socket[data-slot='ram'] { inset: 8% auto auto 56%; width: 22%; height: 36%; }
+.socket[data-slot='gpu'] { inset: 49% auto auto 13%; width: 74%; height: 26%; }
+.socket[data-slot='storage'] { inset: 80% auto auto 43%; width: 38%; height: 15%; }
+.socket[data-slot='cooling'] { inset: 12% auto auto 0%; width: 18%; height: 23%; }
+.socket[data-target='true'] { outline: 2px solid var(--part-edge); outline-offset: 2px; }
+.socket[data-filled='true'] { border-style: solid; border-color: var(--part-edge); background: color-mix(in srgb, var(--part-wash) 40%, transparent); box-shadow: 0 0 12px #ffffff7a; }
+.socketPart { min-width: 0; min-height: 0; width: 100%; height: 100%; display: grid; place-items: center; font-size: clamp(8px, 1.1vw, 13px); }
+.socket[data-filled='true'] .socketPart { animation: seat .56s cubic-bezier(.22,1,.36,1) both; }
+@keyframes seat { from { opacity: .25; transform: translate(var(--seat-x, -14px), var(--seat-y, -12px)) scale(.84); } to { opacity: 1; transform: none; } }
+.picker { display: grid; gap: 6px; min-width: 0; padding: 8px 0 0; margin-top: 6px; border-top: 1px solid #eee5dd; color: var(--ink); }
+.picker [role='combobox'] { min-height: 42px; gap: 6px; padding: 8px; font-size: 12px; border-radius: 7px; }
+.picker [role='combobox'] > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.picker [role='option'] { overflow-wrap: anywhere; gap: 4px; padding-inline: 6px; }
+.place { display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 38px; padding: 5px 6px; background: var(--orange); color: #20120c; font-size: 12px; font-weight: 720; border-radius: 6px; cursor: pointer; }
+.place:hover { background: #ffac8e; }
+.foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; min-height: 40px; padding-top: 11px; }
+.foot button { display: flex; align-items: center; gap: 5px; min-height: 36px; color: #923b24; cursor: pointer; font-size: 13px; }
+@media(max-width: 720px) {
+  .workspace { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .stage { grid-area: 1 / 1 / 2 / -1; padding: 3% 7% 6%; }
+  .case { max-width: 390px; }
+  .parts[data-side='left'] { grid-area: 2 / 1 / 3 / -1; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .parts[data-side='right'] { grid-area: 3 / 1 / 4 / -1; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 5px; }
+  .partButton::after { display: none; }
+}
+
+@media(prefers-reduced-motion: reduce) { .socket[data-filled='true'] .socketPart { animation: none; } }
+
+@media (min-width: 1001px) {
+  .heading { margin-bottom: 10px; }
+  .heading h3 { font-size: clamp(22px, 1.85vw, 28px); margin-bottom: 4px; }
+  .workspace {
+    --callout-gap: clamp(12px, 1.5vw, 23px);
+    grid-template-columns: minmax(110px, 1fr) minmax(0, 2.5fr) minmax(110px, 1fr);
+    align-items: center;
+    gap: var(--callout-gap);
+    padding: 10px;
+  }
+  .stage { padding: 0; }
+  .case { width: min(100%, 52svh); }
+  .parts { gap: clamp(6px, 1.15svh, 11px); }
+  .partCard { position: relative; padding: 6px; }
+  .partCard::after {
+    position: absolute;
+    top: 50%;
+    width: var(--callout-gap);
+    height: 1px;
+    background: #ab7964;
+    pointer-events: none;
+    content: '';
+  }
+  .parts[data-side='left'] .partCard::after { left: 100%; }
+  .parts[data-side='right'] .partCard::after { right: 100%; }
+  .partButton { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px; padding: 0; font-size: 12px; }
+  .partButton > svg { top: 2px; left: 2px; }
+  .partButton::after { display: none; }
+  .thumbnail { height: clamp(33px, 5.5svh, 50px); }
+  .picker { margin-top: 3px; padding-top: 3px; gap: 3px; }
+  .partCard .picker [role='combobox'], .place { min-height: 29px; padding-block: 3px; }
+  .picker > div > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .foot { min-height: 24px; padding-top: 4px; }
+  .foot button { min-height: 24px; }
+}
+
+@media (min-width: 1001px) and (max-height: 820px) {
+  .case { width: min(100%, 47svh); }
+  .workspace { padding-block: 7px; }
+  .partCard { padding-block: 4px; }
+}

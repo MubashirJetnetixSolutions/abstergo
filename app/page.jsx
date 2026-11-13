@@ -94,7 +94,7 @@ useEffect(()=>{const escape=e=>{if(e.key==='Escape'){setPanel(null);setSelected(
 useEffect(()=>{document.body.style.overflow=panel||selected?'hidden':'';return()=>{document.body.style.overflow=''}},[panel,selected]);
 const open=(p)=>{if(['contact','repair','cart'].includes(p)){window.location.href='/'+p;return}setPanel(p);setMenu(false);setSubmitted(false)};const detail=p=>{window.location.href='/products/'+p.id};
 return <main ref={root}><Preloader assets={['/logo.png','/hero-geometric.png',openLaptop]}/>
-<SiteHeader onSearch={()=>open('search')} onCart={()=>open('cart')} cartCount={cart.length}/>
+<SiteHeader/>
 <section className="hero-cinema" aria-label="Discover your laptop’s possibilities">
  <div className={`hero-cinema-stage ${heroStyles.stage}`}><div className={heroStyles.background} aria-hidden="true"><span className={heroStyles.horizon}/></div><div className="laptop-floor-shadow"/>
  <div className="cinema-top"><span className="eyebrow"><i/> ABSTERGO TECHNOLOGY</span><span className="edition">OPEN A NEW DIMENSION.</span></div>
