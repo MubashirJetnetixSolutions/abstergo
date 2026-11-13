@@ -1,43 +1,26 @@
-# Abstergo — Vercel edition
+# Abstergo Technology
 
-This package preserves the current site design and latest review controls, using standard Next.js rather than the hosted Cloudflare runtime.
+Next.js App Router source for the Abstergo website, including the workstation builder, Loomic, Abstergo Xperience, and the product catalog.
 
-## Replace and run
+## Run locally
 
-Extract ALL FOUR ZIPs into the same directory. They merge into `Abstergo-Vercel-Final`. This is a full replacement: remove old application files first, keeping your own backups. Do not merge the old Cloudflare config, build output, or dependencies into this folder.
+Use Node.js 24 and pnpm 11.25.0.
 
-Run with Node.js 22:
+```sh
+corepack pnpm install --frozen-lockfile
+corepack pnpm dev
+```
 
-    npm ci
-    npm run dev
+Open http://localhost:3000. For a production check, run `corepack pnpm build`, then `corepack pnpm start`.
 
-Production:
+## Deploy from GitHub to Vercel
 
-    npm run build
-    npm start
+1. Extract the ZIP. Commit the extracted files, including `.gitignore` and `.nvmrc`, to the root of your GitHub repository. Keep `package.json` and `vercel.json` in the same directory.
+2. Import that GitHub repository in Vercel. Use the **Next.js** framework preset and **Node.js 24.x**. If you put the source in a subfolder, set Vercel’s Root Directory to that folder.
+3. Deploy. The checked-in `vercel.json` pins the install command and selects the standard Next.js build. Clear conflicting install, build, or output directory overrides on an existing Vercel project.
 
-## GitHub / Vercel
+No environment variables are required to build or run the website. The workstation builder generates a shareable quote request in the browser.
 
-Upload the CONTENTS of `Abstergo-Vercel-Final` to your repository root, including package-lock.json and .gitignore. Remove obsolete old config files such as vite.config.*, wrangler.*, and old build directories from the repo. Do not commit node_modules, .next or secrets.
+## Loomic reviews
 
-Vercel settings: Framework Next.js; Root Directory the directory containing package.json (blank if at repository root); Install npm ci; Build npm run build. Leave Output Directory at its framework default. Use Node.js 22. Redeploy the new commit. The code builds without review credentials; reviews require the setup below.
-
-The screenshot shows a failed Vercel check, not its exact build log. This export removes the known Cloudflare/Vinext dependency mismatch; external account/project configuration cannot be verified locally.
-
-## Persistent reviews — one-time Supabase setup
-
-1. Create a Supabase project. Run setup/supabase.sql in its SQL editor. The media bucket is PRIVATE.
-2. Add SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY and REVIEW_OWNER_EMAIL to Vercel environment variables. Copy .env.example to .env.local for local testing. Never put the service role key in a NEXT_PUBLIC variable or commit it.
-3. In Supabase Auth email settings, enable email sign-in and configure SMTP for production delivery. Set the Magic Link email template to display `{{ .Token }}` so customers receive an email OTP, not just a link. Keep Supabase authentication rate limits enabled.
-4. Redeploy after adding environment variables. Visit a product page and sign in with an email code. The owner must sign in using exactly REVIEW_OWNER_EMAIL.
-5. Test a customer review, edit it, then sign in as owner to publish, verify the purchase and remove the review. A verified-purchase badge is only set by the owner after checking the purchase.
-
-Reviews are saved in PostgreSQL; photos/videos are private until the review is published. Only the writer can edit, and only the configured owner can approve/remove. New and edited reviews require approval. A sign-in lasts up to one hour; sign in again after expiry. At most four JPG/PNG/WebP/MP4/WebM files, 3 MB combined per submission. This limit keeps multipart uploads suitable for Vercel functions; compress clips before uploading.
-
-No fake reviews are included. With backend settings missing, the review area reports setup is required. Auth/email/database integration must be tested with your own Supabase project; no live credentials are included.
-
-Other existing consultation/contact forms retain their existing behavior; this export does not connect them to a CRM.
-
-## Validation
-
-Run `node --test tests/review-policy.test.mjs` for review permission, visibility, input and same-origin checks. Production build verified with no backend credentials. A successful build does not replace testing production email delivery or your Vercel account settings.
+The hosted review service uses Cloudflare D1 and R2 with ChatGPT sign-in. On this Vercel export, review endpoints return an unavailable response and product pages display that status. To enable reviews, connect a verified identity provider and persistent review and media storage. Existing review data and uploaded media are separate from this source package.
