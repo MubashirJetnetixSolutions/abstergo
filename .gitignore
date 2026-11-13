@@ -47,3 +47,9 @@ next-env.d.ts
 
 # Local TypeScript cache
 *.tsbuildinfo
+tsconfig.json
+
+# archives and submodules
+*.zip
+crm
+
