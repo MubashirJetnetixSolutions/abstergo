@@ -372,3 +372,6 @@
   .steps h3 { margin-top: 16px; }
 }
 @media(prefers-reduced-motion: reduce) { .steps article { position: relative; top: auto; } }
+
+.steps article:nth-child(2) .processImage { background: radial-gradient(ellipse, #574037, #190f0d); }
+.steps article:nth-child(2) .processImage img { object-fit: contain; }

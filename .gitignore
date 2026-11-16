@@ -52,4 +52,7 @@ tsconfig.json
 # archives and submodules
 *.zip
 crm
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
 

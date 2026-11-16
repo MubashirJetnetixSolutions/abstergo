@@ -495,3 +495,10 @@
 @media (prefers-reduced-motion: reduce) {
   .scrollTrack { display: none; }
 }
+
+.worldPanel[data-tone='gaming'] .worldVisual img,
+.worldPanel[data-tone='custom'] .worldVisual img {
+  object-fit: contain;
+  object-position: center;
+  padding: 5%;
+}

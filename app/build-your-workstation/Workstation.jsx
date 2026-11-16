@@ -8,6 +8,7 @@ import SiteHeader from '../../components/SiteHeader';
 import { ModernSelect } from '../../components/brand/ModernFormControls';
 import styles from './workstation.module.css';
 import PCBuilder from './PCBuilder';
+import FeatureVideo from '../../components/FeatureVideo';
 import AssemblyHero from './AssemblyHero';
 
 const purposes = [
@@ -17,25 +18,43 @@ const purposes = [
   ['Gaming & Streaming', 'High frame rates, streaming, gaming and multitasking.', Gamepad2],
   ['Other / General Professional Use', 'Tell us what you need the machine to do.', CircuitBoard],
 ];
-const buildDetails = [
-  ['Cooling', 'Choose quiet airflow or liquid cooling for sustained workloads.'],
-  ['Graphics', 'Match the GPU to your rendering, AI or gaming workload.'],
-  ['Expansion', 'Plan memory and storage around the projects you’ll take on next.'],
-];
 const recommend = 'Expert recommendation';
 const components = [
-  ['cpu', 'Processor (CPU)', ['Intel Core Ultra 9', 'Intel Core Ultra 7', 'AMD Ryzen 9', 'AMD Ryzen Threadripper']],
-  ['gpu', 'Graphics card (GPU)', ['NVIDIA RTX 5080', 'NVIDIA RTX 5070', 'NVIDIA RTX 5090', 'NVIDIA RTX PRO']],
-  ['ram', 'Memory (RAM)', ['32 GB', '64 GB', '128 GB', '256 GB']],
-  ['storage', 'Storage', ['1 TB NVMe SSD', '2 TB NVMe SSD', '4 TB NVMe SSD', 'Multiple drives']],
-  ['cooling', 'Cooling and build', ['Professional / Quiet', 'High Performance / Liquid Cooling', 'Let Abstergo decide']],
+  ['cpu', 'Processor (CPU)', [
+    'Intel Core Ultra 5 245K', 'Intel Core Ultra 7 265K', 'Intel Core Ultra 9 285K',
+    'AMD Ryzen 5 9600X', 'AMD Ryzen 7 9700X', 'AMD Ryzen 7 9800X3D',
+    'AMD Ryzen 9 9900X', 'AMD Ryzen 9 9950X', 'AMD Ryzen Threadripper 9970X',
+  ]],
+  ['gpu', 'Graphics card (GPU)', [
+    'NVIDIA GeForce RTX 5060 Ti 16 GB', 'NVIDIA GeForce RTX 5070',
+    'NVIDIA GeForce RTX 5070 Ti', 'NVIDIA GeForce RTX 5080', 'NVIDIA GeForce RTX 5090',
+    'NVIDIA RTX PRO 4000 Blackwell', 'NVIDIA RTX PRO 6000 Blackwell Workstation Edition',
+    'AMD Radeon RX 9070', 'AMD Radeon RX 9070 XT',
+  ]],
+  ['ram', 'Memory (RAM)', [
+    '16 GB DDR5 (2 × 8 GB)', '32 GB DDR5 (2 × 16 GB)', '48 GB DDR5 (2 × 24 GB)',
+    '64 GB DDR5 (2 × 32 GB)', '96 GB DDR5 (2 × 48 GB)', '128 GB DDR5 (2 × 64 GB)',
+    '128 GB ECC RDIMM', '256 GB ECC RDIMM',
+  ]],
+  ['storage', 'Storage', [
+    '500 GB NVMe SSD', '1 TB NVMe SSD', '2 TB NVMe SSD', '4 TB NVMe SSD', '8 TB NVMe SSD',
+    '1 TB NVMe SSD + 2 TB NVMe SSD', '2 TB NVMe SSD + 4 TB NVMe SSD',
+    '2 TB NVMe SSD + 8 TB HDD',
+  ]],
+  ['cooling', 'Cooling', [
+    'Quiet tower air cooler', 'Dual-tower air cooler', '240 mm liquid cooler',
+    '280 mm liquid cooler', '360 mm liquid cooler', '420 mm liquid cooler',
+  ]],
+  ['motherboard', 'Motherboard', ['AMD B850 (AM5)', 'AMD X870 (AM5)', 'AMD TRX50 (sTR5)', 'Intel B860 (LGA1851)', 'Intel Z890 (LGA1851)']],
+  ['powerSupply', 'Power supply', ['650 W 80 PLUS Gold', '750 W 80 PLUS Gold', '850 W 80 PLUS Gold', '1000 W 80 PLUS Gold', '1200 W 80 PLUS Platinum', '1600 W 80 PLUS Titanium']],
+  ['case', 'PC case', ['Compact Micro-ATX case', 'Airflow ATX mid-tower', 'Quiet ATX mid-tower', 'E-ATX full-tower']],
 ];
 const budgets = ['Under 1,000,000 FCFA', '1,000,000 – 2,000,000 FCFA', '2,000,000 – 3,000,000 FCFA', '3,000,000 – 5,000,000 FCFA', 'Over 5,000,000 FCFA', 'Help me set a budget'];
 const steps = [
-  ['Consultation', 'We review your requirements and recommend the right components.', '/xperience/client/store-demo.webp'],
-  ['Precision Assembly', 'Your system is carefully assembled with attention to performance, cooling and reliability.', '/xperience/client/custom-pc.webp'],
-  ['Performance Testing', 'We validate system stability, compatibility and performance before delivery.', '/xperience/client/gaming.webp'],
-  ['Ready to Perform', 'Receive your fully configured machine, ready for your workflow.', '/xperience/client/business.webp'],
+  ['Consultation', 'We review your requirements and recommend the right components.', '/loomic/cable-workspace.jpg'],
+  ['Precision Assembly', 'Your system is carefully assembled with attention to performance, cooling and reliability.', '/products/rog-g700-gaming-desktop.png'],
+  ['Performance Testing', 'We validate system stability, compatibility and performance before delivery.', '/products/dell-precision-7680.jpg'],
+  ['Ready to Perform', 'Receive your fully configured machine, ready for your workflow.', '/loomic/desk-room.webp'],
 ];
 
 export default function Workstation() {
@@ -185,11 +204,15 @@ export default function Workstation() {
       </section>
 
       <section className={`${styles.section} ${styles.expert}`} data-expert-section>
-        <div className={styles.expertVisual} data-expert-visual><img src="/xperience/client/custom-pc.webp" alt="Technician assembling a custom computer" loading="lazy" data-expert-image/></div>
+        <div className={styles.expertVisual} data-expert-visual><img src="/products/dell-precision-7680.jpg" alt="Dell Precision workstation laptop" loading="lazy" data-expert-image/></div>
         <div><p className={styles.eyebrow}>Expert guidance</p><h2 aria-label="You bring the ambition." className={styles.expertTitle}>{['You', 'bring', 'the', 'ambition.'].map(word => <span key={word} className={styles.expertWord} aria-hidden="true"><span data-expert-word>{word}</span></span>)}</h2><p>Tell us what you want to accomplish, which software you use, and your budget. Our experts will recommend a configuration designed around your workflow.</p>
         <ul>{['Expert component selection','Compatibility verification','Performance and budget optimization'].map(item => <li key={item}><Check size={17}/>{item}</li>)}</ul>
         <a className={styles.primary} href="#configure" onClick={() => selectMode('expert')}>Let Our Experts Build It For You <ArrowUpRight size={16}/></a></div>
       </section>
+
+      <FeatureVideo id="workstation-video" label="Workstation build overview" title={['From parts', 'to power.']}
+        description="See the chassis, motherboard, graphics card, and power supply up close."
+        source="/videos/workstation-overview.mp4" poster="/videos/workstation-overview.webp" />
 
       <section className={styles.section} data-process-section>
         <p className={styles.eyebrow}>From configuration to creation</p>

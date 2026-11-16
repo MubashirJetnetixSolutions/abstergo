@@ -5,10 +5,11 @@ import { Check, Plus, X } from 'lucide-react';
 import { ModernSelect } from '../../components/brand/ModernFormControls';
 import styles from './pc-builder.module.css';
 
-const visuals = { cpu: 'CPU', gpu: 'GPU', ram: 'RAM', storage: 'SSD', cooling: 'Cooling' };
+const visuals = { cpu: 'CPU', gpu: 'GPU', ram: 'RAM', storage: 'SSD', cooling: 'Cooling', motherboard: 'Motherboard', powerSupply: 'Power supply', case: 'PC case' };
 
 function PartArt({ kind }) {
-  return <img className={styles.partArt} data-kind={kind} src={`/workstation/parts/${kind}.webp`} alt="" draggable={false} />;
+  const source = kind === 'case' ? '/workstation/open-chassis.webp' : `/workstation/parts/${kind}.webp`;
+  return <img className={styles.partArt} data-kind={kind} src={source} alt="" draggable={false} />;
 }
 const dragType = 'application/x-abstergo-part';
 
@@ -49,8 +50,8 @@ export default function PCBuilder({ components, values, onChange, recommend }) {
     </header>
     <div className={styles.workspace}>
       {[
-        ['left', ['cooling', 'gpu', 'ram']],
-        ['right', ['cpu', 'storage']],
+        ['left', ['cooling', 'gpu', 'ram', 'powerSupply']],
+        ['right', ['cpu', 'storage', 'motherboard', 'case']],
       ].map(([side, keys]) => <div key={side} className={styles.parts} data-side={side} role="group" aria-label={`PC parts, ${side} side`}>
           {keys.map(key => {
             const short = visuals[key];

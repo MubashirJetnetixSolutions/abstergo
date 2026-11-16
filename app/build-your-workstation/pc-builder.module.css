@@ -185,3 +185,12 @@
   .workspace { padding-block: 7px; }
   .partCard { padding-block: 4px; }
 }
+
+.socket[data-slot='motherboard'] { inset: 12% auto auto 81%; width: 20%; height: 28%; }
+.socket[data-slot='powerSupply'] { inset: 102% auto auto 4%; width: 39%; height: 17%; }
+.socket[data-slot='case'] { inset: 102% auto auto 55%; width: 43%; height: 17%; }
+.socketPart > span { overflow-wrap: anywhere; text-align: center; }
+.partButton > span:last-of-type { overflow-wrap: anywhere; }
+@media (min-width: 1001px) {
+  .partButton > span:last-of-type { max-width: 9ch; }
+}

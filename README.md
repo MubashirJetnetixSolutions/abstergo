@@ -2,6 +2,8 @@
 
 Next.js App Router source for the Abstergo website, including the workstation builder, Loomic, Abstergo Xperience, and the product catalog.
 
+This version includes the eight-category workstation builder and the updated video showcases on both pages.
+
 ## Run locally
 
 Use Node.js 24 and pnpm 11.25.0.
@@ -15,7 +17,7 @@ Open http://localhost:3000. For a production check, run `corepack pnpm build`, t
 
 ## Deploy from GitHub to Vercel
 
-1. Extract the ZIP. Commit the extracted files, including `.gitignore` and `.nvmrc`, to the root of your GitHub repository. Keep `package.json` and `vercel.json` in the same directory.
+1. Extract the ZIP. Use the extracted folder as a clean project root. If updating an existing repository, replace obsolete project files before committing. Commit the extracted files, including `.gitignore` and `.nvmrc`, to the root of your GitHub repository. Keep `package.json` and `vercel.json` in the same directory.
 2. Import that GitHub repository in Vercel. Use the **Next.js** framework preset and **Node.js 24.x**. If you put the source in a subfolder, set Vercel’s Root Directory to that folder.
 3. Deploy. The checked-in `vercel.json` pins the install command and selects the standard Next.js build. Clear conflicting install, build, or output directory overrides on an existing Vercel project.
 

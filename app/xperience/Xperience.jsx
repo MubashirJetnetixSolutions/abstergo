@@ -5,6 +5,7 @@ import { ArrowDown, ArrowUpRight, CalendarDays, Clapperboard, Compass, History, 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SiteHeader from '../../components/SiteHeader';
+import FeatureVideo from '../../components/FeatureVideo';
 import Link from '../../components/NavigationLink';
 import { events, eventVisuals, journey, promises, worlds } from './content';
 import styles from './xperience.module.css';
@@ -124,7 +125,7 @@ export default function Xperience() {
     <main className={styles.page} ref={root} id="xperience-top">
       <section className={styles.hero} data-x-hero>
         <div className={styles.scene} aria-hidden="true" data-x-scene>
-          <img className={styles.heroPhoto} src="/xperience/client/showroom.webp" alt="" fetchPriority="high" />
+          <img className={styles.heroPhoto} src="/loomic/desk-rgb-studio.webp" alt="" fetchPriority="high" />
           <div className={styles.grid} />
           <div className={styles.ring} />
           <img className={styles.mark} src="/xperience/mark.svg" alt="" data-x-mark />
@@ -163,6 +164,10 @@ export default function Xperience() {
       </section>
 
       <WorldShowcase />
+
+      <FeatureVideo id="xperience-video" label="Xperience showcase" title={['Technology', 'in motion.']} theme="xperience"
+        description="Explore gaming hardware, Loomic accessories, and workspace essentials."
+        source="/videos/xperience-overview.mp4" poster="/videos/xperience-overview.webp" />
 
       <section className={styles.light} id="journey">
         <div className={styles.journey} data-x-journey>
@@ -242,7 +247,7 @@ export default function Xperience() {
             <p>Discover how entrepreneurs, professionals, students, creators, and gamers are making more possible with the right technology.</p>
             <Link className={styles.outline} href="/contact">Share your Xperience <ArrowUpRight size={17}/></Link>
           </div>
-          <img src="/xperience/stories.webp" alt="Laptop and technology accessories arranged on a workspace" loading="lazy" data-x-reveal/>
+          <img src="/loomic/cable-workspace.jpg" alt="Desk setup with Loomic accessories" loading="lazy" data-x-reveal/>
         </div>
       </section>
 
