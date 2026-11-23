@@ -125,7 +125,16 @@ export default function Xperience() {
     <main className={styles.page} ref={root} id="xperience-top">
       <section className={styles.hero} data-x-hero>
         <div className={styles.scene} aria-hidden="true" data-x-scene>
-          <img className={styles.heroPhoto} src="/loomic/desk-rgb-studio.webp" alt="" fetchPriority="high" />
+          <video
+            className={styles.heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/videos/xperience-loop-poster.webp"
+          >
+            <source src="/videos/xperience-loop.mp4" type="video/mp4" />
+          </video>
           <div className={styles.grid} />
           <div className={styles.ring} />
           <img className={styles.mark} src="/xperience/mark.svg" alt="" data-x-mark />
@@ -153,7 +162,10 @@ export default function Xperience() {
 
       <section id="philosophy" className={styles.light}>
         <div className={styles.philosophy}>
-          <div><p className={styles.kicker}><i /> Our Philosophy</p><Heading lines={['The right technology', 'changes everything.']} /></div>
+          <div>
+            <p className={styles.kicker}><i /> Our Philosophy</p>
+            <Heading lines={['The right technology', 'changes everything.']} />
+          </div>
           <div className={styles.body} data-x-reveal>
             <p className={styles.lead}>But finding it takes more than browsing specifications.</p>
             <p>At Abstergo, we believe technology should empower ambitions, unlock potential, and elevate everyday experiences.</p>
@@ -161,13 +173,22 @@ export default function Xperience() {
             <p><strong>Because buying the right technology is only the beginning.</strong></p>
           </div>
         </div>
+        <div className={styles.philosophyVisual} data-x-reveal>
+          <figure>
+            <img
+              src="/xperience/welcome-specialists.webp"
+              alt="Abstergo specialists welcoming clients at the showroom reception"
+              loading="lazy"
+            />
+          </figure>
+        </div>
       </section>
 
       <WorldShowcase />
 
       <FeatureVideo id="xperience-video" label="Xperience showcase" title={['Technology', 'in motion.']} theme="xperience"
         description="Explore gaming hardware, Loomic accessories, and workspace essentials."
-        source="/videos/xperience-overview.mp4" poster="/videos/xperience-overview.webp" />
+        source="/videos/abstergo-video.mp4" poster="/videos/abstergo-video-poster.webp" />
 
       <section className={styles.light} id="journey">
         <div className={styles.journey} data-x-journey>
@@ -247,11 +268,14 @@ export default function Xperience() {
             <p>Discover how entrepreneurs, professionals, students, creators, and gamers are making more possible with the right technology.</p>
             <Link className={styles.outline} href="/contact">Share your Xperience <ArrowUpRight size={17}/></Link>
           </div>
-          <img src="/loomic/cable-workspace.jpg" alt="Desk setup with Loomic accessories" loading="lazy" data-x-reveal/>
+          <img src="/xperience/customer-stories.webp" alt="Abstergo specialist consulting with a client in the showroom" loading="lazy" data-x-reveal/>
         </div>
       </section>
 
       <section className={styles.visit} id="showroom">
+        <div className={styles.visitBackground} aria-hidden="true">
+          <img src="/xperience/flagship-store.webp" alt="" loading="lazy" />
+        </div>
         <img src="/xperience/mark.svg" alt="" aria-hidden="true" />
         <div>
           <p className={styles.kicker}><i /> Your Xperience Starts Here</p>

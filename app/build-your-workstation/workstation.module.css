@@ -165,10 +165,37 @@
 .steps article > div, .reasons article { padding: clamp(17px, 2.3vw, 32px); }
 .steps span, .reasons svg { color: var(--orange); }
 .steps h3, .reasons h3 { margin: 9px 0 0; font-size: clamp(19px, 2vw, 28px); font-weight: 720; letter-spacing: -.045em; line-height: 1.1; }
-.final { text-align: center; padding: clamp(70px, 11vw, 160px) var(--side); background: radial-gradient(ellipse at 50% 100%,#562618,#181416 75%); }
-.final img { width: 156px; margin: 0 auto 24px; }
-.final h2 { margin: auto; }
-.final .primary { margin-top: 23px; }
+.final {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(70px, 11vw, 160px) var(--side);
+  background: radial-gradient(ellipse at 50% 100%,#562618,#181416 75%);
+  isolation: isolate;
+}
+.finalMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.finalLoop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  opacity: .28;
+  filter: saturate(1.2);
+}
+.finalOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(12,12,13,0.55) 0%, rgba(12,12,13,0.92) 85%);
+}
+.final img { width: 156px; margin: 0 auto 24px; position: relative; z-index: 1; }
+.final h2 { margin: auto; position: relative; z-index: 1; }
+.final p { position: relative; z-index: 1; }
+.final .primary { margin-top: 23px; position: relative; z-index: 1; }
 @media (max-width: 1000px) { .purposes { grid-template-columns: repeat(3,minmax(0,1fr)); } .steps { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 720px) {
   .hero { min-height: auto; padding-top: 115px; padding-bottom: 44px; }

@@ -51,10 +51,10 @@ const components = [
 ];
 const budgets = ['Under 1,000,000 FCFA', '1,000,000 – 2,000,000 FCFA', '2,000,000 – 3,000,000 FCFA', '3,000,000 – 5,000,000 FCFA', 'Over 5,000,000 FCFA', 'Help me set a budget'];
 const steps = [
-  ['Consultation', 'We review your requirements and recommend the right components.', '/loomic/cable-workspace.jpg'],
-  ['Precision Assembly', 'Your system is carefully assembled with attention to performance, cooling and reliability.', '/products/rog-g700-gaming-desktop.png'],
-  ['Performance Testing', 'We validate system stability, compatibility and performance before delivery.', '/products/dell-precision-7680.jpg'],
-  ['Ready to Perform', 'Receive your fully configured machine, ready for your workflow.', '/loomic/desk-room.webp'],
+  ['Consultation', 'We review your requirements and recommend the right components.', '/workstation/step-consultation.webp'],
+  ['Precision Assembly', 'Your system is carefully assembled with attention to performance, cooling and reliability.', '/workstation/watercooled-assembly.webp'],
+  ['Performance Testing', 'We validate system stability, compatibility and performance before delivery.', '/workstation/step-testing.webp'],
+  ['Ready to Perform', 'Receive your fully configured machine, ready for your workflow.', '/workstation/step-ready.webp'],
 ];
 
 export default function Workstation() {
@@ -204,7 +204,7 @@ export default function Workstation() {
       </section>
 
       <section className={`${styles.section} ${styles.expert}`} data-expert-section>
-        <div className={styles.expertVisual} data-expert-visual><img src="/products/dell-precision-7680.jpg" alt="Dell Precision workstation laptop" loading="lazy" data-expert-image/></div>
+        <div className={styles.expertVisual} data-expert-visual><img src="/workstation/pyramid-builder.webp" alt="Abstergo PC Building Solution - Custom workstation engineering" loading="lazy" data-expert-image/></div>
         <div><p className={styles.eyebrow}>Expert guidance</p><h2 aria-label="You bring the ambition." className={styles.expertTitle}>{['You', 'bring', 'the', 'ambition.'].map(word => <span key={word} className={styles.expertWord} aria-hidden="true"><span data-expert-word>{word}</span></span>)}</h2><p>Tell us what you want to accomplish, which software you use, and your budget. Our experts will recommend a configuration designed around your workflow.</p>
         <ul>{['Expert component selection','Compatibility verification','Performance and budget optimization'].map(item => <li key={item}><Check size={17}/>{item}</li>)}</ul>
         <a className={styles.primary} href="#configure" onClick={() => selectMode('expert')}>Let Our Experts Build It For You <ArrowUpRight size={16}/></a></div>
@@ -212,7 +212,7 @@ export default function Workstation() {
 
       <FeatureVideo id="workstation-video" label="Workstation build overview" title={['From parts', 'to power.']}
         description="See the chassis, motherboard, graphics card, and power supply up close."
-        source="/videos/workstation-overview.mp4" poster="/videos/workstation-overview.webp" />
+        source="/videos/abstergo-video.mp4" poster="/videos/abstergo-video-poster.webp" />
 
       <section className={styles.section} data-process-section>
         <p className={styles.eyebrow}>From configuration to creation</p>
@@ -231,6 +231,19 @@ export default function Workstation() {
         ].map(([title,copy,Icon]) => <article key={title}><Icon size={26}/><h3>{title}</h3><p>{copy}</p></article>)}</div>
       </section>
       <footer className={styles.final}>
+        <div className={styles.finalMedia} aria-hidden="true">
+          <video
+            className={styles.finalLoop}
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/videos/xperience-loop-poster.webp"
+          >
+            <source src="/videos/xperience-loop.mp4" type="video/mp4" />
+          </video>
+          <div className={styles.finalOverlay} />
+        </div>
         <img src="/logo-white.png" alt="Abstergo Technology" loading="lazy"/><h2>Great things start with the right machine.</h2>
         <p>Design the workstation you’ve always wanted. We’ll help bring it to life.</p>
         <a className={styles.primary} href="#configure">Build Your Workstation <ArrowUpRight size={17}/></a>

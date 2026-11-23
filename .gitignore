@@ -54,5 +54,9 @@ tsconfig.json
 crm
 pnpm-lock.yaml
 pnpm-workspace.yaml
+xpr/
+*.ai
+*.docx
+
 
 

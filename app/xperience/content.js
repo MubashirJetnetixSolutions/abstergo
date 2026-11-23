@@ -1,9 +1,9 @@
 export const worlds = [
-  { name: 'Performance', line: 'Built for those who mean business.', copy: 'Explore premium laptops, workstations, and productivity solutions designed to help you achieve more.', image: '/products/dell-precision-7680.jpg', alt: 'Dell Precision workstation laptop', href: '/shop', tone: 'performance' },
-  { name: 'Gaming', line: 'Push every limit.', copy: 'Discover powerful gaming systems, immersive technology, and high-performance configurations.', image: '/products/rog-g16-hero.png', alt: 'ASUS ROG gaming laptop', href: '/shop', tone: 'gaming' },
-  { name: 'Loomic', line: 'Infinite Innovation. Everyday.', copy: 'Experience thoughtfully designed essentials that make everyday technology simpler, smarter, and more powerful.', image: '/loomic/charger-device-family.jpg', alt: 'Loomic charging accessories arranged with personal devices', href: '/loomic', tone: 'loomic' },
-  { name: 'Custom PC', line: 'Your vision. Engineered to perform.', copy: 'Explore custom-built systems engineered around your unique performance needs.', image: '/products/rog-g700-gaming-desktop.png', alt: 'ASUS ROG desktop tower with illuminated cooling fans', href: '/build-your-workstation', tone: 'custom' },
-  { name: 'Business', line: 'Smarter technology. Stronger business.', copy: 'Discover professional IT solutions, business equipment, and expert guidance to help your organization move forward.', image: '/loomic/desk-room.webp', alt: 'Adjustable workstation desk', href: '/business', tone: 'business' },
+  { name: 'Performance', line: 'Built for those who mean business.', copy: 'Explore premium laptops, workstations, and productivity solutions designed to help you achieve more.', image: '/xperience/thinkpad-x1.webp', alt: 'Lenovo ThinkPad X1 Carbon laptop for engineering and executive productivity', href: '/shop', tone: 'performance' },
+  { name: 'Gaming', line: 'Push every limit.', copy: 'Discover powerful gaming systems, immersive technology, and high-performance configurations.', image: '/xperience/rog-gaming.webp', alt: 'ASUS ROG high-performance gaming ecosystem', href: '/shop', tone: 'gaming' },
+  { name: 'Loomic', line: 'Infinite Innovation. Everyday.', copy: 'Experience thoughtfully designed essentials that make everyday technology simpler, smarter, and more powerful.', image: '/xperience/loomic-ecosystem.webp', alt: 'Loomic fast charging ecosystem and workspace essentials', href: '/loomic', tone: 'loomic' },
+  { name: 'Custom PC', line: 'Your vision. Engineered to perform.', copy: 'Explore custom-built systems engineered around your unique performance needs.', image: '/xperience/custom-pyramid.webp', alt: 'Abstergo Xperience custom pyramid liquid-cooled PC building solution', href: '/build-your-workstation', tone: 'custom' },
+  { name: 'Business', line: 'Smarter technology. Stronger business.', copy: 'Discover professional IT solutions, business equipment, and expert guidance to help your organization move forward.', image: '/xperience/smart-business.webp', alt: 'Modern executive conference room and corporate IT infrastructure', href: '/business', tone: 'business' },
 ];
 
 export const journey = [
@@ -23,14 +23,13 @@ export const promises = [
 ];
 
 export const events = [
-  ['Past Experiences', 'Past event recaps will appear here when they’re available.'],
-  ['Upcoming Events', 'Ask the Abstergo team about upcoming product launches, demonstrations and expert sessions.'],
-  ['Event Highlights', 'Event photos and videos will appear here when they’re available.'],
+  ['Past Experiences', 'Revisit our memorable Abstergo Xperience launch, team presentations, and live community sessions.'],
+  ['Upcoming Events', 'Ask the Abstergo team about upcoming product launches, live interactive demonstrations, and expert sessions.'],
+  ['Event Highlights', 'Experience gaming showdowns, hands-on audio sessions, and custom workstation showcases in our showroom.'],
 ];
 
-
 export const eventVisuals = [
-  { image: '/xperience/client/store-demo.webp', alt: 'A salesperson demonstrates a laptop to two shoppers', credit: 'In-store demonstration reference' },
-  { image: '/xperience/client/launch-stage.webp', alt: 'Samsung Paradigm campaign concept showing a product launch stage', source: 'https://www.behance.net/gallery/244985903/Samsung-Paradigm-Launch-Campaign', contact: true, credit: 'Samsung Paradigm campaign concept · Göksel Aydoğan' },
-  { image: '/xperience/client/esports.webp', alt: 'Illustration accompanying Plug Byte’s esports commentary article', source: 'https://plugbyte.co.uk/the-art-of-esports-commentary-turning-gameplay-into-entertainment/', credit: 'Esports commentary reference · Plug Byte' },
+  { image: '/xperience/abstergo-team.webp', alt: 'The Abstergo Technology team in uniform gathered for Abstergo Xperience', credit: 'Abstergo Xperience Launch · Showroom Team' },
+  { image: '/xperience/demonstration-live.webp', alt: 'Abstergo specialist demonstrating Loomic charging technology to a client', contact: true, credit: 'Live in-store demonstration and personal consultation' },
+  { image: '/xperience/gaming-live.webp', alt: 'Gamers testing competitive gaming on curved display at Abstergo showroom', credit: 'Gaming Xperience & Community Sessions · Abstergo Live' },
 ];

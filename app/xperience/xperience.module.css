@@ -28,7 +28,7 @@
   place-items: center;
   background: radial-gradient(ellipse at 50% 55%, #6a2015 0%, #31140f 34%, #0b0b0c 74%);
 }
-.heroPhoto {
+.heroPhoto, .heroVideo {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -36,6 +36,10 @@
   object-fit: cover;
   object-position: 50% 54%;
   opacity: .82;
+}
+.heroVideo {
+  object-position: 50% 40%;
+  opacity: .75;
 }
 .scene::after {
   content: '';
@@ -420,6 +424,46 @@
 .stories img { width: 100%; aspect-ratio: 1.24; object-fit: cover; border-radius: 17px; }
 .stories .outline { margin-top: 12px; }
 .visit { isolation: isolate; position: relative; text-align: center; padding: clamp(80px, 14vw, 190px) var(--gutter); overflow: hidden; background: radial-gradient(ellipse at 50% 70%, #5d2416, #120e0e 72%); }
+.visitBackground {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.visitBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .2;
+  filter: saturate(1.1) brightness(0.7);
+}
+.philosophy {
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+.philosophyVisual {
+  width: min(100%, 1560px);
+  margin: 0 auto;
+  padding: 0 var(--gutter) clamp(72px, 10vw, 140px);
+}
+.philosophyVisual figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  background: #e2dbd5;
+}
+.philosophyVisual img {
+  width: 100%;
+  height: clamp(340px, 48vw, 620px);
+  max-height: 620px;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 25%;
+  transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.philosophyVisual:hover img {
+  transform: scale(1.02);
+}
 .visit > img { position: absolute; z-index: -1; top: 50%; left: 50%; width: min(80vw, 690px); opacity: .2; transform: translate(-50%, -50%); }
 .visit .heading { font-size: clamp(45px, 7vw, 100px); }
 .visit .button { margin: 24px 0; }
