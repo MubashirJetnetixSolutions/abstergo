@@ -212,7 +212,7 @@ export default function Workstation() {
 
       <FeatureVideo id="workstation-video" label="Workstation build overview" title={['From parts', 'to power.']}
         description="See the chassis, motherboard, graphics card, and power supply up close."
-        source="/videos/abstergo-video.mp4" poster="/videos/abstergo-video-poster.webp" />
+        source="/videos/build-pc.mp4" poster="/videos/pc-poster.png" />
 
       <section className={styles.section} data-process-section>
         <p className={styles.eyebrow}>From configuration to creation</p>
