@@ -497,7 +497,8 @@
     gap: 10%;
     padding: 100px 7%;
     background: #111112;
-    color: white
+    color: white;
+    overflow: hidden
 }
 
 .features h2 {
@@ -518,7 +519,8 @@
     position: relative;
     display: grid;
     place-items: center;
-    margin-top: 40px
+    margin-top: 40px;
+    overflow: hidden
 }
 
 .benefitStage img {
